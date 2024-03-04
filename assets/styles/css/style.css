@@ -11845,8 +11845,6 @@ body {
 
 #left-bar {
   background-color: #000000;
-  padding: 10px;
-  margin-left: 10px;
 }
 
 .bot-left {
@@ -11884,7 +11882,6 @@ body {
 }
 
 #container {
-  padding: 10px;
   height: 100vh;
   overflow-y: scroll;
 }
