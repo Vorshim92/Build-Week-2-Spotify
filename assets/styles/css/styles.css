@@ -337,11 +337,38 @@ body{
 }
 
 /*ARTISTAS*/
-.card_art{
+.container_album{
+    padding: 0 2rem;
+}
+.card_album{
+    border-radius: 15px;
     background-color: #181818;
-    margin-left: 1rem;
+}
+.card_img_album{
+    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.img_album{
+    border-radius: 15%;
+    width: 80%;
+
+}
+.card-body{
+    color: white;
+}
+.card-body p{
+    color: #b3b3b3;
 }
 
+/*ALBUNS*/
+.container_artista{
+    padding: 0 2rem;
+}
+.card_art{
+    border-radius: 15px;
+    background-color: #181818;
+}
 .card_img{
     padding-top: 15px;
     justify-content: center;
