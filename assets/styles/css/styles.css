@@ -9,7 +9,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 23rem; /* 300px para rem */
+    width: auto; /* 300px para rem */
     background-color: #000000;
     padding: 0.75rem; /* 12px para rem */
 }
@@ -371,14 +371,11 @@ body{
 /*FOOTER*/
 
 .disclaimer-premium {
-    z-index: 1000;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    /*background: linear-gradient(to right, #ae2896, #509bf5);*/
-    background-color: #202020;
-    border-top: #444444;
+    background: linear-gradient(to right, #ae2896, #509bf5);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -387,17 +384,17 @@ body{
    flex-shrink: 0;
 }
 .disclaimer-premium .disclaimer-premium__title {
-    color: #202020;
+    color: #ffffff;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 12px;
     margin-bottom: 10px;
 }
 
 .disclaimer-premium .disclaimer-premium__subtitle {
-    color: #202020;
+    color: #ffffff;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .disclaimer-premium button {
@@ -411,4 +408,3 @@ body{
     cursor: pointer;
     flex-shrink: 0;
 }
-
