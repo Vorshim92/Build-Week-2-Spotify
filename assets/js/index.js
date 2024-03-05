@@ -3,10 +3,14 @@ const userIdKey = "userID";
 const fakeBackend = "accounts";
 const rememberMe = "rememberMe";
 const loginForm = document.getElementById("loginForm");
+const SimoneToken = "d3609d9ecamsh8d5f5334d6264c0p1252d0jsn926d147d0152";
+const AmandaToken = "4612f9af8amshb27cc7194c101ccp1caa30jsn4917d5a0745e";
+const StefanoToken = "26b4561beamsh37064d6e74f09cap17d7dajsnd593790b4c51";
+const DorotheaToken = "";
 
 // CLASSI
 class Users {
-  constructor(_email, _password) {
+  constructor(_id, _email, _password) {
     this.id = _id;
     this.email = _email;
     this.password = _password;
@@ -50,6 +54,7 @@ const loginFn = (e) => {
 };
 
 localStorage.setItem(fakeBackend);
+
 window.onload = () => {
   loginForm.addEventListener("submit", (e) => {
     loginFn(e);
