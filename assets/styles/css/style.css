@@ -11839,12 +11839,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.vh100 {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
   height: 100vh;
 }
 
 .fs-7 {
   font-size: 13px;
+}
+
+.container.col-7 {
+  margin-bottom: 118px;
 }
 
 /*# sourceMappingURL=style.css.map */
