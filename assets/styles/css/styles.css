@@ -8,10 +8,14 @@
     padding: 0;
 }
 /* SIDEBAR */
+.bar_sticky{
+    position: fixed;
+}
 .sidebar {
     padding: 1rem;
     width: auto; /* 300px para rem */
     background-color: #000000;
+    width: 25%;
 }
 .sidebar .logo {
     background-color: #121212;
@@ -249,12 +253,15 @@ body{
     background-color: black;
 }
 .main__content{
-    padding-top: 0.75rem;
+    
 }
 .navigation_bar{
+    position: fixed;
     background-color: #101010;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    width: 73%;
+    
 }
 .freciasopra span{
     color: #b3b3b3;
