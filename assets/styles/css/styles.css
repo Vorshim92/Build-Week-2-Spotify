@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
-
 /* SIDEBAR */
 .sidebar {
     left: 0;
@@ -13,62 +11,51 @@
     background-color: #000000;
     padding: 0.75rem; /* 12px para rem */
 }
-
 .sidebar .logo {
     background-color: #121212;
     display: flex;
     border-radius: 0.5rem; /* 8px para rem */
     padding: 1rem 0 0 1rem; /* 16px, 0, 0, 16px para rem */
 }
-
 .sidebar .logo img {
     width: 5rem; /* 80px para rem */
 }
-
 .sidebar__navigation {
     background-color: #121212;
     border-radius: 0.5rem; /* 8px para rem */
     cursor: pointer;
 }
-
 .sidebar nav ul {
     list-style: none;
     margin-top: 1.25rem; /* 20px para rem */
     padding: 0 1.25rem 0.625rem 1.25rem; /* 0, 20px, 10px, 20px para rem */
 }
-
 .sidebar nav ul li {
     padding: 0.625rem 0; /* 10px, 0 para rem */
 
 }
-
 .navbar__title{
     font-weight: 700;
     font-size: 1rem;
 }
-
 .sidebar nav ul li a {
     color: #b3b3b3;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.875rem; /* 14px para rem */
 }
-
 .sidebar nav ul li .fa {
     font-size: 1.25rem; /* 20px para rem */
     margin-right: 0.625rem; /* 10px para rem */
 }
-
 .iconHome svg, path{
     font-size: 1.25rem; /* 20px para rem */
     margin-right: 0.625rem; /* 10px para rem */
     font-weight: 300;
 }
-
 .sidebar nav ul li a:hover {
     color: #ffffff;
 }
-
 .bneLcE{
     fill: currentcolor;
     width: var(--encore-graphic-size-decorative-base, 24px);
@@ -76,9 +63,6 @@
     color: #b3b3b3;
     text-decoration: none;
 }
-
-
-
 
 
 /* LIBRARY */
@@ -110,37 +94,29 @@
     padding: 1.25rem 0.625rem; /* 20px, 10px para rem */
     display: flex;
 }
-
 .library__link{
     color: #b3b3b3;
     text-decoration: none;
 }
-
 .library__link :hover{
     color: #ffffff;
 }
-
 .btn__plus{
     cursor: pointer;
 }
 .btn__plus :hover{
     color: #ffffff;
 }
-
-
-
 .library .library__button .fa {
     font-size: 1.25rem; /* 20px para rem */
     margin-right: 0.625rem; /* 10px para rem */
     font-weight: 300;
     padding-right: 0.5rem; /* 8px para rem */
 }
-
 .library__content {
     display: flex;
     justify-content: space-between;
 }
-
 .library .library__content .fa-plus {
     margin: 1.5rem 0.625rem; /* 24px, 10px para rem */
 }
@@ -160,21 +136,17 @@
     margin: 0.5rem 0;
     padding: 1rem 1.25rem; /* 16px, 20px para rem */
 }
-
 .section-playlist .section-playlist__content {
     display: flex;
     flex-direction: column;
 }
-
 .section-playlist__content .text {
     padding-bottom: 0.875rem; /* 14px para rem */
     color: #fff;
 }
-
 .section-playlist__content .title {
     font-weight: 700;
 }
-
 .section-playlist__content .subtitle{
     font-weight: 500;
     font-size: 0.8rem; /* 12.*/
@@ -195,7 +167,6 @@
     justify-content: center;
     margin-top: 12px;
 }
-
 /* /SECTION - FOOTER SIDE_BAR PODCAST */
 .section-podcast {
     background-color: #242424;
@@ -244,25 +215,19 @@
     margin-top: 12px;
 }
 
-
 /*SECTION COOKIES AND OTHER LINKS*/
-
-
 .sidebar .cookies a {
     color: #b3b3b3;
     font-weight: 500;
     text-decoration: none;
     font-size: 0.7rem;
 }
-
 .cookies{
     margin: 0;
 }
-
 .sidebar .cookies a:hover {
     text-decoration: underline;
 }
-
 .languages .languages__button {
     background-color: transparent;
     border-radius: 9999px;
@@ -276,11 +241,48 @@
     font-weight: bold;
 }
 
-/*MAIN*/
 
+/*MAIN*/
 body{
     background-color: #202020;
 }
+.navigation_bar{
+    background-color: black;
+    margin: 0;
+}
+.freciasopra span{
+    color: #b3b3b3;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.btn-accedi{
+    color: black;
+    background-color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn-accedi :hover{
+    background-color: gray;
+    width: 7.2rem;
+    height: 3.2rem;
+}
+.btn-iscriviti{
+    background-color: black;
+    color: #b3b3b3;
+    font-weight: bold;
+    width: 6rem;
+    border:none;
+    cursor: pointer;
+}
+.btn-iscriviti :hover{
+    color: white;
+}
+xxxxxx
 
 .ativita i{
     color: #b3b3b3;
@@ -291,11 +293,6 @@ body{
     font-weight: bold;
 }
 
-.freciasopra span{
-    color: #b3b3b3;
-    margin-top: 1rem;
-    margin-left: 1rem;
-}
 
 .boxalbum{
     background-color: black;
@@ -306,18 +303,7 @@ body{
     font-family: 'Montserrat', sans-serif;
   }
 
-.btnPlay{
-    color: black;
-    font-weight: bold;
-    width: 6rem;
-    border-radius: 18px;
-}
-.btnSalve {
-    color: white;
-    font-weight: bold;
-    width: 6rem;
-    border-radius: 18px;
-}
+
 
 
 /*#sidebardestra{
