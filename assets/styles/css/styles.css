@@ -1,15 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container_generale{
     margin: 0;
     padding: 0;
 }
 /* SIDEBAR */
 .sidebar {
-    left: 0;
-    top: 0;
-    bottom: 0;
+    padding: 1rem;
     width: auto; /* 300px para rem */
     background-color: #000000;
-    padding: 0.75rem; /* 12px para rem */
 }
 .sidebar .logo {
     background-color: #121212;
@@ -244,11 +246,15 @@
 
 /*MAIN*/
 body{
-    background-color: #202020;
+    background-color: black;
+}
+.main__content{
+    padding-top: 0.75rem;
 }
 .navigation_bar{
-    background-color: black;
-    margin: 0;
+    background-color: #101010;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 .freciasopra span{
     color: #b3b3b3;
@@ -262,17 +268,17 @@ body{
     font-weight: 700;
     font-size: 1.1rem;
     width: 7rem;
-    height: 3rem;
+    height: 2.5rem;
     border-radius: 50px;
     cursor: pointer;
 }
 .btn-accedi :hover{
     background-color: gray;
     width: 7.2rem;
-    height: 3.2rem;
+    height: 2.2rem;
 }
 .btn-iscriviti{
-    background-color: black;
+    background-color: #101010;
     color: #b3b3b3;
     font-weight: bold;
     width: 6rem;
@@ -282,29 +288,11 @@ body{
 .btn-iscriviti :hover{
     color: white;
 }
-xxxxxx
-
-.ativita i{
-    color: #b3b3b3;
-    margin-left: 0.8rem;
-}
-.ativita p{
-    color: #ffffff;
-    font-weight: bold;
-}
-
-
-.boxalbum{
-    background-color: black;
-}
 
 .playlist {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
   }
-
-
-
 
 /*#sidebardestra{
     background-color: black;
@@ -328,25 +316,15 @@ xxxxxx
 */    
 
 .mainscroll{
+    background-color: #1e1e1e;
     height: 100vh;
-    overflow-y: scroll ;
+    overflow-y: scroll;
 }    
 
 .close{
     color: #b3b3b3;
 
 }    
-#sidebardestra{
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    /*width: 18.75rem;  300px para rem */
-    background-color: #000000;
-    padding: 0.75rem; /* 12px para rem */
-}    
-
-    
 .sidebardescription a, p{
     color: #b3b3b3;
     text-decoration: none;
@@ -354,8 +332,34 @@ xxxxxx
     font-size: 0.875rem; /* 14px para rem */
 }  
 
-/*FOOTER*/
+#greeting{
+    padding: 1rem;
+}
 
+/*ARTISTAS*/
+.card_art{
+    background-color: #181818;
+    margin-left: 1rem;
+}
+
+.card_img{
+    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.img_art{
+    border-radius: 50%;
+    width: 80%;
+
+}
+.card-body{
+    color: white;
+}
+.card-body p{
+    color: #b3b3b3;
+}
+
+/*FOOTER*/
 .disclaimer-premium {
     position: fixed;
     bottom: 0;
@@ -376,13 +380,11 @@ xxxxxx
     font-size: 12px;
     margin-bottom: 10px;
 }
-
 .disclaimer-premium .disclaimer-premium__subtitle {
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
 }
-
 .disclaimer-premium button {
     background-color: #ffffff;
     color: #000000;
