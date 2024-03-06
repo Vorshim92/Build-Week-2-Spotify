@@ -12029,6 +12029,10 @@ path {
   margin-top: 12px;
 }
 
+.section-playlist__button:hover {
+  transform: scale(1.1);
+}
+
 /* /SECTION - FOOTER SIDE_BAR PODCAST */
 .section-podcast {
   background-color: #242424;
@@ -12081,6 +12085,10 @@ path {
   margin-top: 12px;
 }
 
+.section-podcast__button:hover {
+  transform: scale(1.1);
+}
+
 /*SECTION COOKIES AND OTHER LINKS*/
 .sidebar .cookies a {
   color: #b3b3b3;
@@ -12108,6 +12116,11 @@ path {
   width: 170px;
   margin: 8px;
   font-weight: bold;
+  padding-right: 8px;
+}
+
+.languages__button:hover {
+  transform: scale(1.1);
 }
 
 /*MAIN*/
@@ -12129,6 +12142,10 @@ body {
   /* left: 0; */
 }
 
+.btn_nav_bar {
+  padding: 8px;
+}
+
 .freciasopra span {
   color: #b3b3b3;
   margin-top: 1rem;
@@ -12147,10 +12164,8 @@ body {
   cursor: pointer;
 }
 
-.btn-accedi :hover {
-  background-color: gray;
-  width: 7.2rem;
-  height: 2.2rem;
+.btn-accedi:hover {
+  transform: scale(1.1);
 }
 
 .btn-iscriviti {
@@ -12162,8 +12177,13 @@ body {
   cursor: pointer;
 }
 
-.btn-iscriviti :hover {
+.btn-iscriviti:hover {
   color: white;
+  transform: scale(1.1);
+}
+
+.btn_iscriviti_gratis:hover {
+  transform: scale(1.1);
 }
 
 .playlist {
@@ -12197,6 +12217,7 @@ body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .mainscroll::-webkit-scrollbar {
   width: 12px;
@@ -12399,6 +12420,7 @@ p {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .disclaimer-premium .text {
@@ -12464,6 +12486,12 @@ p {
 
 #secondBlock {
   margin-top: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .disclaimer-premium {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
