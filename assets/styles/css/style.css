@@ -12354,6 +12354,10 @@ p {
   line-height: 1.9rem;
 }
 
+.titolo_top-links {
+  font-weight: 700;
+}
+
 .a-social {
   height: 40px;
   width: 40px;

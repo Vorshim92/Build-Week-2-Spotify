@@ -264,7 +264,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 997;
-   /* left: 0; */
+  /* left: 0; */
 }
 .btn_nav_bar{
   padding: 8px;
@@ -460,6 +460,9 @@ p {
 .top-links {
   list-style-type: none;
   line-height: 1.9rem;
+}
+.titolo_top-links{
+  font-weight: 700;
 }
 .a-social {
   height: 40px;
