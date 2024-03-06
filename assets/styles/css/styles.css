@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 /* SIDEBAR */
@@ -235,9 +237,13 @@ path {
   cursor: pointer;
   align-items: center;
   padding: 8px;
-  width: 170px;
+  width: 150px;
   margin: 8px;
   font-weight: bold;
+}
+
+.languages__button:hover{
+    transform: scale(1.1);
 }
 
 /*MAIN*/
@@ -264,17 +270,15 @@ body {
   color: black;
   background-color: white;
   border: none;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 16px;
+  font-weight: bold;
   width: 7rem;
   height: 2.5rem;
   border-radius: 50px;
   cursor: pointer;
 }
-.btn-accedi :hover {
-  background-color: gray;
-  width: 7.2rem;
-  height: 2.2rem;
+.btn-accedi:hover{
+  transform: scale(1.1);
 }
 .btn-iscriviti {
   background-color: #101010;
@@ -284,13 +288,17 @@ body {
   border: none;
   cursor: pointer;
 }
-.btn-iscriviti :hover {
-  color: white;
+.btn-iscriviti:hover {
+    transform: scale(1.1);
 }
 
 .playlist {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
+}
+
+.playlist h3{
+    font-weight: 700;
 }
 
 /*#sidebardestra{
@@ -526,4 +534,7 @@ p {
   border-radius: 40px;
   cursor: pointer;
   flex-shrink: 0;
+}
+.btn-iscriviti-gratis:hover{
+    transform: scale(1.1);
 }
