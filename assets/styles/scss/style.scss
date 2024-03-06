@@ -623,7 +623,7 @@ a {
   font-size: 16px;
 }
 .playlist-style {
-  background-color: #242424;
+  // background-color: #242424;
   border-radius: 0.5rem;
   /* gap: 1.25rem; */
   display: flex;
@@ -634,6 +634,11 @@ a {
   margin: 0.5rem 0;
   /* padding: 1rem 1.25rem; */
   flex-direction: column;
+}
+.list-item:hover {
+  background-color: #2a2a2a5b;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 // playerbar

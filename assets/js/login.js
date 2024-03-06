@@ -11,27 +11,33 @@ const DorotheaToken = "";
 
 // CLASSI
 class Users {
-  constructor(_id, _email, _password) {
+  constructor(_id, _email, _password, _token) {
     this.id = _id;
     this.email = _email;
     this.password = _password;
+    this.token = _token;
   }
 }
-
 function restoreSession(userID) {}
+
+const signupFn = (e) => {
+  // ACQUISISCO I VALORI DEL FORM
+  const userEmail = document.getElementById("emailId");
+  const userPassword = document.getElementById("passwordId");
+  const newUser = new Users(uniqueID, userEmail.value, userPassword.value);
+  console.log(newUser);
+  const uniqueID = CryptoJS.SHA256(userEmail.value + userPassword.value).toString(CryptoJS.enc.Hex);
+  console.log(uniqueID);
+};
 
 const loginFn = (e) => {
   e.preventDefault();
-  // ACQUISISCO I VALORI DEL FORM
   const userEmail = document.getElementById("emailId");
   const userPassword = document.getElementById("passwordId");
   const checkboxLogin = document.getElementById("checkboxLogin");
   // GENERO UN ID UNICO PER L'EMAIL INSERITA e LA PASSWORD INSIEME
-  const uniqueID = CryptoJS.SHA256(userEmail.value + userPassword.value).toString(CryptoJS.enc.Hex);
-  console.log(uniqueID);
+
   // USO IL COSTRUTTORE PER GENERARE L'UTENTE DAI DATI INSERITI NEL FORM
-  const newUser = new Users(uniqueID, userEmail.value, userPassword.value);
-  console.log(newUser);
 
   // RICHIAMO IL FINTO DATABASE NEL FINTO SERVER
   const localFakeBackend = localStorage.getItem(fakeBackend);

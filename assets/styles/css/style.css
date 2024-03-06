@@ -12528,7 +12528,6 @@ a {
 }
 
 .playlist-style {
-  background-color: #242424;
   border-radius: 0.5rem;
   /* gap: 1.25rem; */
   display: flex;
@@ -12539,6 +12538,12 @@ a {
   margin: 0.5rem 0;
   /* padding: 1rem 1.25rem; */
   flex-direction: column;
+}
+
+.list-item:hover {
+  background-color: rgba(42, 42, 42, 0.3568627451);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .player-bar {
