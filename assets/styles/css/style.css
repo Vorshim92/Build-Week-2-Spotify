@@ -12125,6 +12125,7 @@ body {
   border-top-right-radius: 12px;
   position: sticky;
   top: 0;
+  z-index: 997;
   /* left: 0; */
 }
 
