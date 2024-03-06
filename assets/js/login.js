@@ -3,6 +3,7 @@ const userIdKey = "userID";
 const fakeBackend = "accounts";
 const rememberMe = "rememberMe";
 const loginForm = document.getElementById("loginForm");
+const loginBtn = document.getElementById("loginBtn");
 const SimoneToken = "d3609d9ecamsh8d5f5334d6264c0p1252d0jsn926d147d0152";
 const AmandaToken = "4612f9af8amshb27cc7194c101ccp1caa30jsn4917d5a0745e";
 const StefanoToken = "26b4561beamsh37064d6e74f09cap17d7dajsnd593790b4c51";
@@ -20,15 +21,18 @@ class Users {
 function restoreSession(userID) {}
 
 const loginFn = (e) => {
+  e.preventDefault();
   // ACQUISISCO I VALORI DEL FORM
   const userEmail = document.getElementById("emailId");
   const userPassword = document.getElementById("passwordId");
   const checkboxLogin = document.getElementById("checkboxLogin");
   // GENERO UN ID UNICO PER L'EMAIL INSERITA e LA PASSWORD INSIEME
   const uniqueID = CryptoJS.SHA256(userEmail.value + userPassword.value).toString(CryptoJS.enc.Hex);
-
+  console.log(uniqueID);
   // USO IL COSTRUTTORE PER GENERARE L'UTENTE DAI DATI INSERITI NEL FORM
   const newUser = new Users(uniqueID, userEmail.value, userPassword.value);
+  console.log(newUser);
+
   // RICHIAMO IL FINTO DATABASE NEL FINTO SERVER
   const localFakeBackend = localStorage.getItem(fakeBackend);
 
@@ -48,18 +52,28 @@ const loginFn = (e) => {
     }
   } else {
     const accountsArray = [];
-    accountsArray.push(newMeetingEvent);
+    accountsArray.push(newUser);
     localStorage.setItem(fakeBackend, JSON.stringify(accountsArray));
   }
 };
 
-localStorage.setItem(fakeBackend);
+// localStorage.setItem(fakeBackend);
 
 window.onload = () => {
+  loginBtn.addEventListener("click", (e) => {
+    const modal = document.getElementById("myModal");
+    const modalContent = document.getElementById("modalContent");
+    modal.style.display = "block";
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
   loginForm.addEventListener("submit", (e) => {
     loginFn(e);
   });
   if (rememberMe) {
-    restoreSession(userID);
+    // restoreSession(userID);
   }
 };

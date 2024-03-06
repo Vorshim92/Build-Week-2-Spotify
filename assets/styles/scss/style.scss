@@ -318,6 +318,8 @@ body {
 .mainscroll {
   background-color: #1e1e1e;
   height: 100vh;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 12px;
@@ -527,4 +529,42 @@ p {
   border-radius: 40px;
   cursor: pointer;
   flex-shrink: 0;
+}
+
+// MODAL LOGIN
+/* MODAL VIEW */
+.modal {
+  display: block;
+
+  z-index: 998;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Stile del contenuto del modale */
+.modal-content {
+  z-index: 999;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+
+  max-width: 500px;
+  background-color: black;
+}
+#imgSpot {
+  width: 250px;
+}
+
+#firstBlock {
+  margin-top: 50px;
+}
+
+#secondBlock {
+  margin-top: 60px;
 }
