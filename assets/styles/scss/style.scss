@@ -536,7 +536,6 @@ p {
 /* MODAL VIEW */
 .modal {
   display: block;
-
   z-index: 998;
   display: none;
   width: 100%;
@@ -548,13 +547,11 @@ p {
 /* Stile del contenuto del modale */
 .modal-content {
   z-index: 999;
-
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
-
   max-width: 500px;
   background-color: black;
 }
@@ -568,4 +565,20 @@ p {
 
 #secondBlock {
   margin-top: 60px;
+}
+
+.checkboxLabel {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  padding-block: 4px;
+  position: relative;
+  min-block-size: 32px;
+}
+.newCheckbox {
+  border-radius: 11px;
+  block-size: 16px;
+  min-inline-size: 30px;
+  background-color: green;
 }
