@@ -33,10 +33,6 @@ function restoreSession(userID) {}
 function effect() {
   if (songPlayer.paused) {
     songPlayer.play();
-    // progress.addEventListener("click", (e) => {
-    //   let widthbar2 = (e.offsetX / e.target.clientWidth) * songPlayer.duration;
-    //   songPlayer.currentTime = widthbar2;
-    // });
   } else {
     songPlayer.pause();
   }
