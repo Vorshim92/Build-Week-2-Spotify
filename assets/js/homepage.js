@@ -31,29 +31,15 @@ function restoreSession(userID) {}
 
 // FUNZIONI PLAYER
 function effect() {
-  if (songPlayer.duration == songPlayer.currentTime) {
-    x += 1;
-    console.log(x);
-  }
-  if (!playIcon.classList.contains("d-none")) {
+  if (songPlayer.paused) {
     songPlayer.play();
-    playIcon.classList.add("d-none");
-    pauseIcon.classList.remove("d-none");
-    progressInterval = setInterval(prog, 1000);
-    lineInterval = setInterval(line, 1000);
-    progress.addEventListener("click", (e) => {
-      let widthbar2 = (e.offsetX / e.target.clientWidth) * songPlayer.duration;
-      songPlayer.currentTime = widthbar2;
-    });
+    // progress.addEventListener("click", (e) => {
+    //   let widthbar2 = (e.offsetX / e.target.clientWidth) * songPlayer.duration;
+    //   songPlayer.currentTime = widthbar2;
+    // });
   } else {
     songPlayer.pause();
-    clearInterval(progressInterval);
-    clearInterval(lineInterval);
-
-    playIcon.classList.remove("d-none");
-    pauseIcon.classList.add("d-none");
   }
-  dur();
 }
 
 function removeEffect() {
@@ -65,30 +51,45 @@ function removeEffect() {
 
 function songInPlayer(track) {
   songPlayer.src = "./assets/mp3/eminem.mp3";
-  dur();
 }
 
-function dur() {
-  let durata = songPlayer.duration;
-  let secDurata = Math.floor(durata % 60);
-  let minDurata = Math.floor(durata / 60);
-  if (secDurata < 10) {
-    secDurata = `0${secDurata}`;
-  }
-  end.innerText = `${minDurata}:${secDurata}`;
-}
-function prog() {
-  let currentTime = songPlayer.currentTime;
-  let secCur = Math.floor(currentTime % 60);
-  let minCur = Math.floor(currentTime / 60);
-  if (secCur < 10) {
-    secCur = `0${secCur}`;
-  }
-  start.innerText = `${minCur}:${secCur}`;
-}
 function line() {
   let widthbar = (songPlayer.currentTime / songPlayer.duration) * 100;
   lines.style.width = `${widthbar}%`;
+}
+
+// FUNZIONI MARCO
+songPlayer.addEventListener("timeupdate", () => {
+  const percent = (songPlayer.currentTime / songPlayer.duration) * 100;
+  lines.style.width = `${percent}%`;
+
+  start.textContent = formatTime(songPlayer.currentTime);
+});
+
+songPlayer.addEventListener("loadedmetadata", () => {
+  end.textContent = formatTime(songPlayer.duration);
+});
+
+songPlayer.addEventListener("ended", () => {
+  playIcon.classList.remove("d-none");
+  pauseIcon.classList.add("d-none");
+  lines.style.width = "0%";
+});
+
+songPlayer.addEventListener("play", () => {
+  playIcon.classList.add("d-none");
+  pauseIcon.classList.remove("d-none");
+});
+
+songPlayer.addEventListener("pause", () => {
+  pauseIcon.classList.add("d-none");
+  playIcon.classList.remove("d-none");
+});
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
 }
 
 //FUNZIONE BARRA VOLUME
@@ -104,7 +105,10 @@ function adjustVolume(event) {
 //WINDOW ONLOAD
 window.onload = () => {
   volumeBar.addEventListener("click", adjustVolume);
-
+  progress.addEventListener("click", (e) => {
+    let widthbar2 = (e.offsetX / e.target.clientWidth) * songPlayer.duration;
+    songPlayer.currentTime = widthbar2;
+  });
   divPlayerIcons.addEventListener("click", effect);
   songInPlayer();
 
