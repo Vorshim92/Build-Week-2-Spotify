@@ -167,6 +167,9 @@ path {
   justify-content: center;
   margin-top: 12px;
 }
+.section-playlist__button:hover {
+  transform: scale(1.1);
+}
 /* /SECTION - FOOTER SIDE_BAR PODCAST */
 .section-podcast {
   background-color: #242424;
@@ -214,6 +217,9 @@ path {
   justify-content: center;
   margin-top: 12px;
 }
+.section-podcast__button:hover {
+  transform: scale(1.1);
+}
 
 /*SECTION COOKIES AND OTHER LINKS*/
 .sidebar .cookies a {
@@ -239,8 +245,11 @@ path {
   width: 170px;
   margin: 8px;
   font-weight: bold;
+  padding-right: 8px;
 }
-
+.languages__button:hover {
+  transform: scale(1.1);
+}
 /*MAIN*/
 body {
   background-color: black;
@@ -255,7 +264,11 @@ body {
   position: sticky;
   top: 0;
   z-index: 997;
+  z-index: 997;
   /* left: 0; */
+}
+.btn_nav_bar {
+  padding: 8px;
 }
 .freciasopra span {
   color: #b3b3b3;
@@ -273,10 +286,8 @@ body {
   border-radius: 50px;
   cursor: pointer;
 }
-.btn-accedi :hover {
-  background-color: gray;
-  width: 7.2rem;
-  height: 2.2rem;
+.btn-accedi:hover {
+  transform: scale(1.1);
 }
 .btn-iscriviti {
   background-color: #101010;
@@ -286,10 +297,13 @@ body {
   border: none;
   cursor: pointer;
 }
-.btn-iscriviti :hover {
+.btn-iscriviti:hover {
   color: white;
+  transform: scale(1.1);
 }
-
+.btn_iscriviti_gratis:hover {
+  transform: scale(1.1);
+}
 .playlist {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
@@ -322,6 +336,7 @@ body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   overflow-y: scroll;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 12px;
   }
@@ -448,6 +463,9 @@ p {
   list-style-type: none;
   line-height: 1.9rem;
 }
+.titolo_top-links {
+  font-weight: 700;
+}
 .a-social {
   height: 40px;
   width: 40px;
@@ -505,6 +523,7 @@ p {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .disclaimer-premium .text {
   flex-shrink: 0;
@@ -800,4 +819,9 @@ a {
 
 .playlist-container {
   // background-color: #1e1e1e;
+}
+@media screen and (max-width: 767px) {
+  .disclaimer-premium {
+    display: none;
+  }
 }
