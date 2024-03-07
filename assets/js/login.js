@@ -46,7 +46,7 @@ async function getArtist(id) {
     <div class="card-body d-flex">
       <div class="d-flex flex-column justify-content-center">
         <h5 class="card-title">${artist.name}</h5>
-        <p class="card-text">${artist.link}</p>
+        <p class="card-text">${"Artista"}</p>
       </div>
     </div>
   </div>`;
