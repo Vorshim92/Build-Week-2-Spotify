@@ -18,6 +18,46 @@ class Users {
     this.token = _token;
   }
 }
+
+// FETCH FUNCTIONS
+async function getArtist(id) {
+  const url = `https://deezerdevs-deezer.p.rapidapi.com/artist/${id}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "26b4561beamsh37064d6e74f09cap17d7dajsnd593790b4c51",
+      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const artist = await response.json();
+    console.log(artist);
+    const cardHTML = `<div class="card d-flex card_art">
+    <div class="d-flex card_img position-relative">
+      <img class="card-img-top img_art" src="${artist.picture_medium}" alt="" />
+      <div class="play-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+        </svg>
+      </div>
+    </div>
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column justify-content-center">
+        <h5 class="card-title">${artist.name}</h5>
+        <p class="card-text">${artist.link}</p>
+      </div>
+    </div>
+  </div>`;
+    document.querySelectorAll(".artistCard").forEach((card) => {
+      card.innerHTML = cardHTML;
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 function restoreSession(userID) {}
 
 const signupFn = (e) => {
@@ -66,6 +106,8 @@ const loginFn = (e) => {
 // localStorage.setItem(fakeBackend);
 
 window.onload = () => {
+  getArtist(Math.floor(Math.random() * 9999));
+
   loginBtn.addEventListener("click", (e) => {
     const modal = document.getElementById("myModal");
     const modalContent = document.getElementById("modalContent");
