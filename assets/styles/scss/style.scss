@@ -328,9 +328,18 @@ body {
       }  
   */
 
+.artist-thumbnail {
+  background-image: url("https://www.rollingstone.com/wp-content/uploads/2022/01/eminem-50-best-songs.jpg?w=1600&h=900&crop=1");
+  position: relative;
+}
+
+.jumbotron {
+  margin-top: 15rem;
+}
+
 .mainscroll {
-  background-color: #1e1e1e;
-  height: 100vh;
+  background: linear-gradient(to bottom, #212121, #121212);
+  height: 90vh;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   overflow-y: scroll;
@@ -749,7 +758,7 @@ a {
   background-color: #1e1e1e;
   padding: 1rem;
 }
-#top-card{
+#top-card {
   height: 60px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
@@ -768,9 +777,9 @@ a {
   width: 60px;
   height: auto;
   object-fit: cover;
-  margin-right:0;
+  margin-right: 0;
 }
-#top-card h4{
+#top-card h4 {
   font-size: 1rem;
   margin-right: auto;
   color: #fff;
@@ -778,7 +787,7 @@ a {
   margin-right: 3rem;
 }
 
-#play-stop{
+#play-stop {
   width: 40px;
   height: 40px;
   background-color: #1fdf64;
@@ -823,10 +832,9 @@ a {
   }
 }
 
-
 //Lavorerò qui per HomePage - Amanda//
 //Button sopra contetuni principali//
-.me-2:hover{
+.me-2:hover {
   background-color: white !important;
-  color:black !important;
+  color: black !important;
 }
