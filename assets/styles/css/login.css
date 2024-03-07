@@ -13,3 +13,6 @@ body {
 #secondBlock {
   margin-top: 60px;
 }
+#form label {
+  width: 50px;
+}
