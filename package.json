@@ -5,7 +5,6 @@
   "name": "sass",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "compile-live": "sass ./assets/styles/scss/style.scss ./assets/styles/css/style.css -w"
   },
