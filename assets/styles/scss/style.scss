@@ -15,5 +15,65 @@ body {
 }
 
 .container.col-7 {
-  margin-bottom: 118px;
+  margin-bottom: 99px;
+}
+
+.main-container {
+  margin-bottom: 110px;
+}
+
+.play-button {
+  background-color: rgb(54, 230, 0);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.6s ease, trasform 0.8s ease;
+}
+
+.card_art:hover .play-button {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.play-button svg {
+  width: 69%;
+  height: 65%;
+}
+.container_album {
+  padding: 0 2rem;
+}
+.card_album {
+  border-radius: 15px;
+  background-color: #181818;
+}
+.card_album:hover {
+  background-color: rgb(56, 56, 56);
+  cursor: pointer;
+}
+.card_album:hover .play-button {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.card_img_album {
+  padding-top: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.img_album {
+  border-radius: 15%;
+  width: 80%;
+}
+.card-body {
+  color: white;
+}
+.card-body p {
+  color: #b3b3b3;
 }
