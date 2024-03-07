@@ -1,5 +1,4 @@
 // VARIABILI GLOBALI
-const userIdKey = "userID";
 const fakeBackend = "accounts";
 const rememberMe = "rememberMe";
 const loginForm = document.getElementById("loginForm");

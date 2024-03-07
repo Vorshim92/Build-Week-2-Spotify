@@ -12605,6 +12605,21 @@ a {
   font-size: 1.5rem;
 }
 
+#pause-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+#pause-btn i {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
 #progress {
   width: 90%;
   height: 3px;
@@ -12612,6 +12627,32 @@ a {
   border-radius: 5px;
   margin: unset;
   margin-inline: 0.5rem;
+  position: relative;
+}
+
+.lineChild {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  width: 0%;
+  height: 100%;
+  transition: width 0.1s;
+}
+.lineChild::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  cursor: pointer;
+  top: -4px;
+  right: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+#song {
+  display: none;
 }
 
 #middle-bot {

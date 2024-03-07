@@ -628,14 +628,20 @@
             <div id="middle-top" class="d-flex column-gap-4 justify-content-center">
               <div><img src="./assets/imgs/shuffle-svg.svg" alt="shuffle" /></div>
               <div><img src="./assets/imgs/swipe-left-svg.svg" alt="left-swipe" /></div>
-              <div id="play-btn" class="d-flex"><img src="./assets/imgs/play-svg.svg" alt="play" /></div>
+              <div class="ctrl center" id="playsong">
+                <div id="play-btn" class="d-flex"><img src="./assets/imgs/play-svg.svg" alt="play" /></div>
+                <div id="pause-btn" class="d-flex d-none"><img src="./assets/imgs/pause-16.svg" alt="play" /></div>
+              </div>
               <div><img src="./assets/imgs/swipe-right.svg" alt="right-swipe" /></div>
               <div><img src="./assets/imgs/repeat-svg.svg" alt="repeat" /></div>
             </div>
             <div id="middle-bot" class="d-flex align-center">
-              <small>0:00</small>
-              <div id="progress"></div>
-              <small>3:05</small>
+              <small id="start" class="text-white"></small>
+              <div id="progress"><div class="lineChild"></div></div>
+
+              <small id="end" class="text-white"></small>
+              <!-- AUDIO TRACK PLAYER -->
+              <audio src="" id="song"></audio>
             </div>
           </div>
           <!-- PLAYER BAR RIGHT SECTION  -->
@@ -662,7 +668,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/homepage.js"></script>
     <!-- END_SCRIPT -->
   </body>
 </html>
