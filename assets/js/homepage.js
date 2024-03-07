@@ -54,7 +54,7 @@ function line() {
   lines.style.width = `${widthbar}%`;
 }
 
-// FUNZIONI MARCO
+// FUNZIONI PLAYER
 songPlayer.addEventListener("timeupdate", () => {
   const percent = (songPlayer.currentTime / songPlayer.duration) * 100;
   lines.style.width = `${percent}%`;
