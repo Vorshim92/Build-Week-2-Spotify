@@ -6,8 +6,7 @@
 }
 
 /* SIDEBAR */
-.bar_sticky {
-}
+
 .sidebar {
   padding: 1rem;
   /* background-color: #000000; */
@@ -254,9 +253,7 @@ path {
 body {
   background-color: black;
 }
-.main__content {
-  /* padding: 1rem; */
-}
+
 .navigation_bar {
   background-color: #101010;
   border-top-left-radius: 12px;
@@ -555,7 +552,6 @@ p {
 // MODAL LOGIN
 /* MODAL VIEW */
 .modal {
-  display: block;
   z-index: 998;
   display: none;
   width: 100%;
@@ -565,8 +561,9 @@ p {
 }
 
 /* Stile del contenuto del modale */
-.modal-content {
+.modal-login {
   z-index: 999;
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -575,15 +572,26 @@ p {
   max-width: 500px;
   background-color: black;
 }
-#imgSpot {
+.modal-signup {
+  z-index: 999;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  max-width: 500px;
+  background-color: black;
+}
+.imgSpot {
   width: 250px;
 }
 
-#firstBlock {
+.firstBlock {
   margin-top: 50px;
 }
 
-#secondBlock {
+.secondBlock {
   margin-top: 60px;
 }
 
@@ -813,13 +821,6 @@ a {
   left: 6px;
 }
 
-#result-playlists {
-  // background-color: #1e1e1e;
-}
-
-.playlist-container {
-  // background-color: #1e1e1e;
-}
 @media screen and (max-width: 767px) {
   .disclaimer-premium {
     display: none;
