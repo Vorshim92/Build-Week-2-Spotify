@@ -12469,7 +12469,6 @@ p {
 
 /* MODAL VIEW */
 .modal {
-  display: block;
   z-index: 998;
   display: none;
   width: 100%;
@@ -12479,8 +12478,9 @@ p {
 }
 
 /* Stile del contenuto del modale */
-.modal-content {
+.modal-login {
   z-index: 999;
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -12490,15 +12490,27 @@ p {
   background-color: black;
 }
 
-#imgSpot {
+.modal-signup {
+  z-index: 999;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  max-width: 500px;
+  background-color: black;
+}
+
+.imgSpot {
   width: 250px;
 }
 
-#firstBlock {
+.firstBlock {
   margin-top: 50px;
 }
 
-#secondBlock {
+.secondBlock {
   margin-top: 60px;
 }
 
@@ -12605,6 +12617,21 @@ a {
   font-size: 1.5rem;
 }
 
+#pause-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+#pause-btn i {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
 #progress {
   width: 90%;
   height: 3px;
@@ -12612,6 +12639,32 @@ a {
   border-radius: 5px;
   margin: unset;
   margin-inline: 0.5rem;
+  position: relative;
+}
+
+.lineChild {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  width: 0%;
+  height: 100%;
+  transition: width 0.1s;
+}
+.lineChild::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  cursor: pointer;
+  top: -4px;
+  right: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+#song {
+  display: none;
 }
 
 #middle-bot {
