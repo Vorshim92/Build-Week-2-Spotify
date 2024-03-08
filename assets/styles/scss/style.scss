@@ -1119,3 +1119,60 @@ i {
   top: 0;
   z-index: 998;
 }
+
+//CREAZIONI PER UN CARD RESEARCH RESULTS
+.artistCard_research {
+  width: 11.3rem;
+}
+.card_art_research {
+  border-radius: 15px;
+  background-color: #181818;
+}
+.card_research:hover {
+  background-color: rgb(56, 56, 56);
+  cursor: pointer;
+}
+.card_research:hover .play-button {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.card_img_research:hover #play-stop_research {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.card_img_research {
+  padding-top: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.img_art_research {
+  border-radius: 50%;
+  width: 80%;
+}
+#play-stop_research {
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #1fdf64;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  right: 0.8rem;
+}
+#play-stop_research:hover {
+  transform: scale(1.1);
+}
+#play-stop_research i {
+  align-items: center;
+  font-size: 2rem;
+  position: absolute;
+  top: -4px;
+  left: 6px;
+}
+.card_img_research:hover #play-stop_research {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
