@@ -16,7 +16,19 @@
     <title>Registrati a Spotify</title>
     <style>
       body {
+        background: linear-gradient(to top, #000000, #404040);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .card {
         background-color: #000;
+        color: #fff;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       }
       #message {
         display: none;
@@ -56,14 +68,12 @@
       }
     </style>
   </head>
-  <
   <body class="d-flex justify-content-center align-items-center">
     <div id="thirdblock" class="container">
       <div class="container-sm mt-3">
-        <div>
-          <h2 class="text-center text-light">Registrati a Spotify</h2>
-          <!-- onsubmit="return check()" non funziona ci sono altri 2 input submit -->
-          <div>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="text-center text-light mb-4">Registrati a Spotify</h2>
             <div id="alert" class="alert alert-danger" role="alert" style="display: none"></div>
 
             <div class="mb-3">
@@ -81,42 +91,26 @@
                 aria-describedby="emailHelp"
               />
             </div>
-            <div class="mb-3">
-              <div class="mb-3">
-                <label for="exampleInputPassword" class="form-label text-light">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  class="form-control"
-                  value=""
-                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword" class="form-label text-light">Conferma la password</label>
-                <input type="password" id="password_conf" class="form-control" value="" />
+            <!-- Aggiungi gli altri campi del form qui -->
+
+            <div id="message">
+              <h4>La password deve essere composta da:</h4>
+              <p id="letter" class="invalid">Una lettere <b>minuscola</b></p>
+              <p id="capital" class="invalid">Una lettere <b>maiuscola </b></p>
+              <p id="number" class="invalid">Un <b>numero</b></p>
+              <p id="length" class="invalid">Una lunghezza minima di <b>8 caratteri</b></p>
+            </div>
+            <div class="mb-6 content_login d-flex text-center justify-content-center flex-column">
+              <div id="success" class="alert alert-success" role="alert" style="display: none"></div>
+
+              <button type="submit" class="btn btn-success rounded-pill" onclick="check();registrati()">
+                Registrati
+              </button>
+              <div class="mt-3 d-flex flex-column">
+                <p>oppure</p>
+                <a href="homepage.html">Accedi</a>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputToken" class="form-label text-light">Token</label>
-              <input type="token" id="f" class="form-control" value="" placeholder="Generate your token" />
-            </div>
-          </div>
-
-          <div id="message">
-            <h4>La password deve essere composta da:</h4>
-            <p id="letter" class="invalid">Una lettere <b>minuscola</b></p>
-            <p id="capital" class="invalid">Una lettere <b>maiuscola </b></p>
-            <p id="number" class="invalid">Un <b>numero</b></p>
-            <p id="length" class="invalid">Una lunghezza minima di <b>8 caratteri</b></p>
-          </div>
-          <div class="mb-6 content_login d-flex text-center justify-content-center flex-column">
-            <div id="success" class="alert alert-success" role="alert" style="display: none"></div>
-
-            <button type="submit" class="btn btn-success rounded-pill" onclick="check();registrati()">
-              Registrati
-            </button>
-            oppure <a href="homepage.html">Accedi</a>
           </div>
         </div>
       </div>
