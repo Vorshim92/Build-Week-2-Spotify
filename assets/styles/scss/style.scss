@@ -749,7 +749,7 @@ a {
 #top-cards {
   background-color: #1e1e1e;
 }
-#top-card{
+#top-card {
   height: 60px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
@@ -768,9 +768,9 @@ a {
   width: 60px;
   height: auto;
   object-fit: cover;
-  margin-right:0;
+  margin-right: 0;
 }
-#top-card h4{
+#top-card h4 {
   font-size: 1rem;
   margin-right: auto;
   color: #fff;
@@ -778,7 +778,7 @@ a {
   margin-right: 3rem;
 }
 
-#play-stop{
+#play-stop {
   width: 40px;
   height: 40px;
   background-color: #1fdf64;
@@ -787,10 +787,10 @@ a {
   opacity: 0;
   right: 0.8rem;
 }
-#play-stop:hover{
+#play-stop:hover {
   transform: scale(1.1);
 }
-#play-stop i{
+#play-stop i {
   align-items: center;
 }
 
@@ -829,37 +829,38 @@ a {
   }
 }
 
-
 //Lavorerò qui per HomePage - Amanda//
 //Button sopra contetuni principali//
-.me-2:hover{
+.me-2:hover {
   background-color: white !important;
-  color:black !important;
+  color: black !important;
 }
-.avatar{
-  width: 2.5rem;
-  height: 2.5rem;
+.avatar {
+  // width: 2.5rem;
+  // height: 2.5rem;
 }
-.avatar img, i{
+.avatar img,
+i {
   object-fit: cover;
   border-radius: 50%;
+  width: 50px;
 }
-.install{
+.install {
   width: 7rem;
   height: 1.5rem;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   cursor: pointer;
 }
-.install img{
+.install img {
   color: #b3b3b3;
   width: 1.2rem;
   height: 1.2rem;
 }
-.install p{
+.install p {
   margin: 0;
 }
-.install p:hover{
+.install p:hover {
   color: white;
 }
 .artistCard{
