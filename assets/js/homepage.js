@@ -184,7 +184,7 @@ async function generateArtistPage(id) {
     const response = await fetch(url, options);
     const artist = await response.json();
     searchResult.classList.add("d-none");
-    searchBar.classList.add("d-none");
+    document.querySelector(".searchbar").classList.add("d-none");
     searchBar.value = "";
     document.querySelector(".div-topbar").style.backgroundColor = "transparent";
     scrollingContainer.style.paddingTop = "0";
@@ -388,10 +388,10 @@ window.onload = () => {
   //EVENT ICONA SEARCH, HIDE-UNHIDE
   searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    if (searchBar.classList.contains("d-none")) {
-      searchBar.classList.remove("d-none");
+    if (document.querySelector(".searchbar").classList.contains("d-none")) {
+      document.querySelector(".searchbar").classList.remove("d-none");
     } else {
-      searchBar.classList.add("d-none");
+      document.querySelector(".searchbar").classList.add("d-none");
     }
   });
 
