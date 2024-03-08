@@ -12812,6 +12812,13 @@ a {
   color: black !important;
 }
 
+.avatar {
+  margin: 2px;
+  background-color: black;
+  padding: 6px;
+  border-radius: 50%;
+}
+
 .avatar img,
 i {
   object-fit: cover;
@@ -12819,26 +12826,55 @@ i {
   width: 50px;
 }
 
-.install {
-  width: 7rem;
-  height: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+.avatar img {
+  width: 45px;
+  height: 45px;
+}
+
+.box_install {
+  background-color: black;
+  width: 9.5rem;
+  height: 3rem;
+  border-radius: 30px;
+  justify-content: space-evenly;
+  align-items: center;
   cursor: pointer;
 }
 
-.install img {
-  color: #b3b3b3;
-  width: 1.2rem;
-  height: 1.2rem;
+.box_install img {
+  background-color: black;
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
-.install p {
+.paragrafo_box_install {
+  font-size: 1rem;
+  color: white;
   margin: 0;
 }
 
-.install p:hover {
+.box_install p:hover {
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.bell {
+  background-color: black;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+
+.bell_img {
   color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.blue_point {
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 0;
 }
 
 .artistCard {
@@ -12974,6 +13010,22 @@ i {
   transition: 0.3s;
 }
 
+.arrow {
+  margin-left: 15px;
+}
+
+.left-arrow {
+  background-color: black;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.right-arrow {
+  background-color: black;
+  padding: 8px;
+  border-radius: 50%;
+}
+
 .box_research {
   background-color: #242424;
   border: 0;
@@ -12984,13 +13036,14 @@ i {
   text-overflow: ellipsis;
   width: 100%;
   margin-block: 0px;
+  margin-left: 20px;
 }
 
 .icon_research {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 12px;
+  left: 35px;
   color: #b3b3b3;
 }
 
