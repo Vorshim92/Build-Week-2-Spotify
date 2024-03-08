@@ -24,7 +24,7 @@
       }
 
       .navbar-brand .Svg-sc-6c3c1v-0.fMEvxo {
-        fill: white; /* o il colore desiderato per lo svg */
+        fill: white;
       }
 
       .card {
@@ -35,14 +35,17 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       }
       #imgSpot {
-        margin-left: 20px; /* Adjust the margin to your preference */
+        margin-left: 20px;
       }
-
       .spotify-logo--text {
         fill: white;
       }
       .input-rigth {
         text-align: left;
+      }
+      .remember-me-label {
+        text-align: left !important;
+        margin-right: 100px;
       }
     </style>
   </head>
@@ -60,6 +63,7 @@
             height="100%"
             data-encore-id="logoSpotify"
             class="Svg-sc-6c3c1v-0 fMEvxo"
+            fill="white"
           >
             <title>Spotify</title>
             <path
@@ -112,7 +116,7 @@
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" required class="form-check-input" id="exampleCheck1" />
-              <label class="form-check-label text-light" for="exampleCheck1">Remember me</label>
+              <label class="form-check-label text-light remember-me-label" for="exampleCheck1">Remember me</label>
             </div>
             <div class="content_login d-flex text-center justify-content-center flex-column">
               <button type="submit" id="loginBtn" class="btn btn-success rounded-pill">Login</button>
