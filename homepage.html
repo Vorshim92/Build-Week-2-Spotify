@@ -107,7 +107,7 @@
                 </button>
                 <span class="fa fa-plus btn__plus"></span>
               </div>
-              <div id="playlist-buttons" class="d-flex align-items-center flex-wrap px-3">
+              <div id="playlist-buttons-sidebar" class="d-flex align-items-center flex-wrap px-3">
                 <button class="me-2">Playlist</button>
                 <button class="me-2">Album</button>
                 <button class="me-2">Artisti</button>
@@ -276,8 +276,8 @@
                           <img src="./assets/imgs/svgexport-21.svg" alt="right" />
                         </div>
                       </div>
-                      <div class="searchbar d-none d-flex gap-3 text-white">
-                        <input id="searchBar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                      <div class="searchbar d-flex gap-3 text-white">
+                        <input id="searchBar" class="form-control me-2 d-none" type="search" placeholder="Search" aria-label="Search" />
                       </div>
                     </div>
                     <div class="right-element d-flex gap-3 w-35 align-items-center">
@@ -295,7 +295,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="playlist-buttons" class="d-flex align-items-center flex-wrap px-3">
+                  <div id="playlist-buttons-topbar" class="d-flex align-items-center flex-wrap px-3">
                     <button class="me-2">Playlist</button>
                     <button class="me-2">Album</button>
                     <button class="me-2">Artisti</button>
@@ -708,6 +708,9 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <!-- FOOTER -->
+              <div class="inside-footer">
                 <div id="footer" class="text-white d-flex pt-5 pb-4">
                   <div class="d-flex justify-content-start flex-wrap gap-4">
                     <ul class="top-links">
@@ -774,6 +777,7 @@
                   </div>
                 </div>
               </div>
+              <!-- END FOOTER -->
             </div>
           </div>
         </div>

@@ -12551,7 +12551,8 @@ p {
   left: auto;
 }
 
-#playlist-buttons button {
+#playlist-buttons-sidebar button,
+#playlist-buttons-topbar button {
   border-radius: 20px;
   border: none;
   background-color: #2a2a2a;

@@ -1,6 +1,7 @@
 // VARIABILI GLOBALI
 const fakeBackend = "accounts";
 const rememberMe = "rememberMe";
+const scrollingContainer = document.querySelector(".scrolling");
 // VARIABILI GLOBALI SEARCH BAR
 const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
@@ -104,7 +105,7 @@ function restoreSession(userID) {}
 
 // SEARCHBAR
 async function searchFn(e) {
-  let searchValue = searchBar.value;
+  const searchValue = searchBar.value;
   const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${searchValue}`;
   const options = {
     method: "GET",
@@ -123,8 +124,8 @@ async function searchFn(e) {
   }
 }
 function topResultFn(search) {
+  console.log(search);
   const searchResponse = search.data;
-  console.log(searchResponse);
   topResult.querySelector(".artistCard1").innerHTML = "";
   listItemsResult.innerHTML = "";
 
@@ -162,6 +163,254 @@ function topResultFn(search) {
     }
   });
   topResult.querySelector(".artistCard1").innerHTML = templateHtmlCard;
+  topResult.querySelector(".card_art1").addEventListener("click", () => {
+    generateArtistPage(searchResponse[0].artist.id);
+  });
+  return;
+}
+
+// GENERAZIONE ARTIST PAGE
+async function generateArtistPage(id) {
+  const url = `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`;
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViMTkyMzJkN2IxMTAwMTkwZTc3MjAiLCJpYXQiOjE3MDk5MDYyMTEsImV4cCI6MTcxMTExNTgxMX0.BDY9TtC32T677MPFKwb9dbWQUpyKUKfsvQJvKWz1thA",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const artist = await response.json();
+    searchResult.classList.add("d-none");
+    searchBar.classList.add("d-none");
+    searchBar.value = "";
+    document.querySelector(".div-topbar").style.backgroundColor = "transparent";
+    scrollingContainer.style.paddingTop = "0";
+    document.getElementById("playlist-buttons-topbar").classList.add("d-none");
+    scrollingContainer.innerHTML = "";
+
+    console.log(artist);
+    scrollingContainer.innerHTML = `<div class="artist-thumbnail p-3 text-white">
+    <div class="jumbotron col-9 p-0 d-flex flex-column justify-content-end gap-3 text-white">
+      <div class="display-4 fw-bold">
+        <p class="fs-7 fw-normal mb-0">Artista verificato</p>
+        Eminem
+      </div>
+      <span class="fs-7">70.000.000 di ascoltatori mensili</span>
+    </div>
+  </div>
+  <div class="text-white p-2">
+    <div class="d-flex gap-4 align-items-center px-2 pt-3">
+      <button class="btn btn-success rounded-5"><i class="bi bi-play-fill fs-5"></i></button>
+      <div><button class="btn btn-outline-light px-3 py-1 fs-7 fw-bold">FOLLOWING</button></div>
+      <div class="fw-bold"><i class="bi bi-three-dots fs-4"></i></div>
+    </div>
+    <div class="row mt-3 px-4 d-flex justify-content-between main-container">
+      <div class="col-6 d-flex flex-column gap-3">
+        <span class="px-2 py-3 fs-4 fw-bold">Popolari</span>
+        <div class="row d-flex align-items-center">
+          <div class="col-5 d-flex gap-3">
+            <span>1</span>
+            <div class="col-10 d-flex align-items-center">
+              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
+              <span class="ms-3">Montanelli</span>
+            </div>
+          </div>
+          <div class="col-6">1.000.000</div>
+          <div class="col-1">3.00</div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-5 d-flex gap-3">
+            <span>2</span>
+            <div class="col-10 d-flex align-items-center">
+              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
+              <span class="ms-3">Montanelli</span>
+            </div>
+          </div>
+          <div class="col-6">1.000.000</div>
+          <div class="col-1">3.00</div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-5 d-flex gap-3">
+            <span>3</span>
+            <div class="col-10 d-flex align-items-center">
+              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
+              <span class="ms-3">Montanelli</span>
+            </div>
+          </div>
+          <div class="col-6">1.000.000</div>
+          <div class="col-1">3.00</div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-5 d-flex gap-3">
+            <span>4</span>
+            <div class="col-10 d-flex align-items-center">
+              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
+              <span class="ms-3">Montanelli</span>
+            </div>
+          </div>
+          <div class="col-6">1.000.000</div>
+          <div class="col-1">3.00</div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-5 d-flex gap-3">
+            <span>5</span>
+            <div class="col-10 d-flex align-items-center">
+              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
+              <span class="ms-3">Montanelli</span>
+            </div>
+          </div>
+          <div class="col-6">1.000.000</div>
+          <div class="col-1">3.00</div>
+        </div>
+        <span class="fs-7 fw-bold">VISUALIZZA ALTRO</span>
+      </div>
+      <!-- BRANI CHE TI PIACCIONO -->
+      <div class="col-5">
+        <h4 class="py-3">Brani che ti piacciono</h4>
+        <div class="d-flex gap-3 align-items-center">
+          <div>
+            <img src="./assets/imgs/main/image-12.jpg" width="60px" class="rounded-5" alt="" />
+          </div>
+          <div>
+            <h6>Hai messo mi piace a 11 brani</h6>
+            <span class="fs-7">Di Yellowcard</span>
+          </div>
+        </div>
+      </div>
+      <!-- Albuns -->
+      <div class="playlist-container">
+        <div id="result-playlists">
+          <div class="playlist">
+            <h3 class="my-4" id="greeting">Album più popolari</h3>
+          </div>
+        </div>
+        <!--First ROW Main content-->
+        <div class="row container_album gy-4">
+          <!--ALBUM 1-->
+          <div class="col-2">
+            <div class="card d-flex card_album">
+              <div class="d-flex card_img_album position-relative">
+                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
+                <div class="play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                  <h5 class="card-title">X2VR</h5>
+                  <p class="card-text">Sfera Ebbasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--ALBUM 2-->
+          <div class="col-2">
+            <div class="card d-flex card_album">
+              <div class="d-flex card_img_album position-relative">
+                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
+                <div class="play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                  <h5 class="card-title">X2VR</h5>
+                  <p class="card-text">Sfera Ebbasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--ALBUM 3-->
+          <div class="col-2">
+            <div class="card d-flex card_album">
+              <div class="d-flex card_img_album position-relative">
+                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
+                <div class="play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                  <h5 class="card-title">X2VR</h5>
+                  <p class="card-text">Sfera Ebbasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--ALBUM 4-->
+          <div class="col-2">
+            <div class="card d-flex card_album">
+              <div class="d-flex card_img_album position-relative">
+                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
+                <div class="play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                  <h5 class="card-title">X2VR</h5>
+                  <p class="card-text">Sfera Ebbasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--ALBUM 5-->
+          <div class="col-2">
+            <div class="card d-flex card_album">
+              <div class="d-flex card_img_album position-relative">
+                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
+                <div class="play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                  <h5 class="card-title">X2VR</h5>
+                  <p class="card-text">Sfera Ebbasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--ALBUM 6-->
+          <div class="col-2">
+            <div class="card d-flex card_album">
+              <div class="d-flex card_img_album position-relative">
+                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
+                <div class="play-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body d-flex">
+                <div class="d-flex flex-column justify-content-center">
+                  <h5 class="card-title">X2VR</h5>
+                  <p class="card-text">Sfera Ebbasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECONDA -->
+    </div>
+  </div>`;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 //WINDOW ONLOAD
@@ -169,10 +418,10 @@ window.onload = () => {
   //EVENT ICONA SEARCH, HIDE-UNHIDE
   searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    if (document.querySelector(".searchbar").classList.contains("d-none")) {
-      document.querySelector(".searchbar").classList.remove("d-none");
+    if (searchBar.classList.contains("d-none")) {
+      searchBar.classList.remove("d-none");
     } else {
-      document.querySelector(".searchbar").classList.add("d-none");
+      searchBar.classList.add("d-none");
     }
   });
 
