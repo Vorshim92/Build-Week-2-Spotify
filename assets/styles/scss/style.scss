@@ -339,30 +339,9 @@ body {
 .mainscroll {
   background: linear-gradient(to bottom, #212121, #121212);
   position: relative;
-  // height: 90vh;
-  // border-top-left-radius: 12px;
-  // border-top-right-radius: 12px;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
-  // &::-webkit-scrollbar {
-  //   width: 0px;
-  // }
-  // &::-webkit-scrollbar-track {
-  //   background-color: transparent;
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //   background-color: transparent;
-  // }
-  // &:hover {
-  //   &::-webkit-scrollbar-thumb {
-  //     background-color: #949494;
-  //   }
-  // }
-}
-.scrolling {
+  height: 100vh;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   &::-webkit-scrollbar {
@@ -379,6 +358,28 @@ body {
       background-color: #949494;
     }
   }
+}
+.scrolling {
+  padding-top: 150px; // only in homepage, si disabilita in artistpage
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  // height: 100vh;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
+  // &::-webkit-scrollbar {
+  //   width: 12px;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background-color: transparent;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background-color: transparent;
+  // }
+  // &:hover {
+  //   &::-webkit-scrollbar-thumb {
+  //     background-color: #949494;
+  //   }
+  // }
 }
 .close {
   color: #b3b3b3;
@@ -811,22 +812,14 @@ a {
   /* stile per lo slider */
 }
 .div-topbar {
-  position: absolute !important;
-  z-index: 997;
-  width: 100%;
-}
-#topbar {
-  background-color: transparent;
+  background-color: #1f1f1f; // diventa transparent nell'artist page
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  // position: fixed;
-  // top: 0;
-  // right: 0;
-  // left: 0;
-  // width: 100%;
-  // z-index: 997;
-  padding-block: 40px;
-  // height: 50px;
+  padding-block: 15px;
+  position: absolute !important;
+  top: 0;
+  z-index: 997;
+  width: 100%;
 }
 
 #top-cards {
