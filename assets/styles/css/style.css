@@ -12974,4 +12974,28 @@ i {
   transition: 0.3s;
 }
 
+.box_research {
+  background-color: #242424;
+  border: 0;
+  border-radius: 500px;
+  color: #fff;
+  height: 48px;
+  padding: 6px 36px;
+  text-overflow: ellipsis;
+  width: 100%;
+  margin-block: 0px;
+}
+
+.icon_research {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  color: #b3b3b3;
+}
+
+.div_box_research:hover {
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=style.css.map */
