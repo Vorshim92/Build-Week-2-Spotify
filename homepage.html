@@ -132,6 +132,46 @@
               <section class="playlist-style">
                 <div class="list-item d-flex align-items-center py-1 ps-1">
                   <div id="playlist-img" style="width: 53px">
+                    <img src="https://misc.scdn.co/liked-songs/liked-songs-64.png" alt="" class="img-fluid rounded" />
+                  </div>
+                  <div id="playlist-info" class="ms-2">
+                    <p class="mb-0 fw-bold">Liked Songs</p>
+                    <p class="mb-0 fw-light">Playlist· 237</p>
+                  </div>
+                </div>
+
+                <div class="list-item d-flex align-items-center py-1 ps-1">
+                  <div id="playlist-img" style="width: 53px">
+                    <img src="./assets/imgs/main/image-1.jpg" alt="" class="img-fluid rounded" />
+                  </div>
+                  <div id="playlist-info" class="ms-2">
+                    <p class="mb-0 fw-bold">Titolo</p>
+                    <p class="mb-0 fw-light">Playlist/Artista · autore</p>
+                  </div>
+                </div>
+
+                <div class="list-item d-flex align-items-center py-1 ps-1">
+                  <div id="playlist-img" style="width: 53px">
+                    <img src="./assets/imgs/main/image-1.jpg" alt="" class="img-fluid rounded" />
+                  </div>
+                  <div id="playlist-info" class="ms-2">
+                    <p class="mb-0 fw-bold">Titolo</p>
+                    <p class="mb-0 fw-light">Playlist/Artista · autore</p>
+                  </div>
+                </div>
+
+                <div class="list-item d-flex align-items-center py-1 ps-1">
+                  <div id="playlist-img" style="width: 53px">
+                    <img src="./assets/imgs/main/image-1.jpg" alt="" class="img-fluid rounded" />
+                  </div>
+                  <div id="playlist-info" class="ms-2">
+                    <p class="mb-0 fw-bold">Titolo</p>
+                    <p class="mb-0 fw-light">Playlist/Artista · autore</p>
+                  </div>
+                </div>
+
+                <div class="list-item d-flex align-items-center py-1 ps-1">
+                  <div id="playlist-img" style="width: 53px">
                     <img src="./assets/imgs/main/image-1.jpg" alt="" class="img-fluid rounded" />
                   </div>
                   <div id="playlist-info" class="ms-2">
@@ -225,7 +265,7 @@
           <div class="container-fluid">
             <div class="playlist-container mainscroll">
               <div id="topbar">
-                <div class="container-fluid d-flex justify-content-between" style="background-color: #101010; border-top-left-radius: 12px; border-top-right-radius: 12px">
+                <div class="container-fluid d-flex justify-content-between pb-3" style="background-color: #101010; border-top-left-radius: 12px; border-top-right-radius: 12px">
                   <div class="arrow d-flex gap-3">
                     <div class="left-arrow d-flex">
                       <img src="./assets/imgs/svgexport-20.svg" alt="left" />
@@ -234,17 +274,18 @@
                       <img src="./assets/imgs/svgexport-21.svg" alt="right" />
                     </div>
                   </div>
-                  <div class="right-element d-flex gap-2">
-                    <div class="install d-flex">
+                  <div class="right-element d-flex gap-3 w-35 align-items-center">
+                    <div class="d-flex install">
                       <img src="./assets/imgs/svgexport-22.svg" alt="download" />
-                      <p>Installa app</p>
+                      <p class="ms-2 paragrafo_install">Installa app</p>
                     </div>
                     <div class="bell d-flex">
                       <img src="./assets/imgs/svgexport-23.svg" alt="bell" />
                       <img id="point" src="./assets/imgs/point-absolute-28.svg" alt="point" />
                     </div>
-                    <div class="avatar d-flex">
-                      <i class="bi bi-person-circle"></i>
+                    <div class="d-flex avatar">
+                      <img src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="avatar" />
+                      <!-- <i class="bi bi-person-circle"></i> -->
                     </div>
                   </div>
                 </div>
@@ -256,36 +297,97 @@
               </div>
 
               <div id="top-cards" class="container-fluid">
-                <div class="row gap-2">
-                  <div id="top-card" class="col-3 flex-fill d-flex">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
-                    <div class="col-auto"><h4>A rotazione</h4></div>
-                    <div id="play-stop"><i class="bi bi-play-fill"></i></div>
+                <div class="row">
+                  <div class="col-3">
+                    <!--Rotazione 1-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
+                    <!--Rotazione 2-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
                   </div>
-                  <div id="top-card" class="col-3 flex-fill d-flex">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
-                    <div class="col-auto"><h4>A rotazione</h4></div>
-                    <div id="play-stop"><i class="bi bi-play-fill"></i></div>
+
+                  <div class="col-3">
+                    <!--Rotazione 3-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
+                    <!--Rotazione 4-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
                   </div>
-                  <div id="top-card" class="col-3 flex-fill d-flex">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
-                    <div class="col-auto"><h4>A rotazione</h4></div>
-                    <div id="play-stop"><i class="bi bi-play-fill"></i></div>
+
+                  <div class="col-3">
+                    <!--Rotazione 5-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
+                    <!--Rotazione 6-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
                   </div>
-                  <div id="top-card" class="col-3 flex-fill d-flex">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
-                    <div class="col-auto"><h4>A rotazione</h4></div>
-                    <div id="play-stop"><i class="bi bi-play-fill"></i></div>
-                  </div>
-                  <div id="top-card" class="col-3 flex-fill d-flex">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
-                    <div class="col-auto"><h4>A rotazione</h4></div>
-                    <div id="play-stop"><i class="bi bi-play-fill"></i></div>
-                  </div>
-                  <div id="top-card" class="col-3 flex-fill d-flex">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
-                    <div class="col-auto"><h4>A rotazione</h4></div>
-                    <div id="play-stop"><i class="bi bi-play-fill"></i></div>
+
+                  <div class="col-3">
+                    <!--Rotazione 7-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
+                    <!--Rotazione 8-->
+                    <div id="top-card" class="col flex-fill d-flex mb-2">
+                      <img src="./assets/imgs/main/image-1.jpg" alt="cover" />
+                      <div class="col">
+                        <h4>A rotazione</h4>
+                      </div>
+                      <div id="play-stop">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -295,16 +397,14 @@
                 </div>
               </div>
               <!--First ROW Main content-->
-              <div class="row container_artista">
+              <div class="d-flex flex-wrap gap-2 container_artista">
                 <!--ARTISTA 1-->
-                <div class="col-2">
-                  <div class="card d-flex card_art">
-                    <div class="d-flex card_img position-relative">
-                      <img class="card-img-top img_art" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
-                      <div class="play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                        </svg>
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
                       </div>
                     </div>
                     <div class="card-body d-flex">
@@ -316,14 +416,12 @@
                   </div>
                 </div>
                 <!--ARTISTA 2-->
-                <div class="col-2">
-                  <div class="card d-flex card_art">
-                    <div class="d-flex card_img position-relative">
-                      <img class="card-img-top img_art" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
-                      <div class="play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                        </svg>
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
                       </div>
                     </div>
                     <div class="card-body d-flex">
@@ -335,14 +433,12 @@
                   </div>
                 </div>
                 <!--ARTISTA 3-->
-                <div class="col-2">
-                  <div class="card d-flex card_art">
-                    <div class="d-flex card_img position-relative">
-                      <img class="card-img-top img_art" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
-                      <div class="play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                        </svg>
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
                       </div>
                     </div>
                     <div class="card-body d-flex">
@@ -354,14 +450,12 @@
                   </div>
                 </div>
                 <!--ARTISTA 4-->
-                <div class="col-2">
-                  <div class="card d-flex card_art">
-                    <div class="d-flex card_img position-relative">
-                      <img class="card-img-top img_art" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
-                      <div class="play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                        </svg>
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
                       </div>
                     </div>
                     <div class="card-body d-flex">
@@ -373,14 +467,12 @@
                   </div>
                 </div>
                 <!--ARTISTA 5-->
-                <div class="col-2">
-                  <div class="card d-flex card_art">
-                    <div class="d-flex card_img position-relative">
-                      <img class="card-img-top img_art" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
-                      <div class="play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                        </svg>
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
                       </div>
                     </div>
                     <div class="card-body d-flex">
@@ -392,14 +484,46 @@
                   </div>
                 </div>
                 <!--ARTISTA 6-->
-                <div class="col-2">
-                  <div class="card d-flex card_art">
-                    <div class="d-flex card_img position-relative">
-                      <img class="card-img-top img_art" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
-                      <div class="play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                        </svg>
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
+                    <div class="card-body d-flex">
+                      <div class="d-flex flex-column justify-content-center">
+                        <h5 class="card-title">Sfera Ebbasta</h5>
+                        <p class="card-text">Artista</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--ARTISTA 7-->
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
+                      </div>
+                    </div>
+                    <div class="card-body d-flex">
+                      <div class="d-flex flex-column justify-content-center">
+                        <h5 class="card-title">Sfera Ebbasta</h5>
+                        <p class="card-text">Artista</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--ARTISTA 8-->
+                <div class="artistCard1">
+                  <div class="card d-flex card_art1">
+                    <div class="d-flex card_img1 position-relative">
+                      <img class="img_art1" src="./assets/imgs/Sfera-Ebbasta-1.jpg" alt="sfera ebbasta" />
+                      <div id="play-stop2">
+                        <i class="bi bi-play-fill"></i>
                       </div>
                     </div>
                     <div class="card-body d-flex">
@@ -419,16 +543,14 @@
                   </div>
                 </div>
                 <!--First ROW Main content-->
-                <div class="row container_album">
+                <div class="d-flex flex-wrap gap-2 container_album">
                   <!--ALBUM 1-->
-                  <div class="col-2">
-                    <div class="card d-flex card_album">
-                      <div class="d-flex card_img_album position-relative">
-                        <img class="card-img-top img_album" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
-                        <div class="play-button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                          </svg>
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
                         </div>
                       </div>
                       <div class="card-body d-flex">
@@ -440,14 +562,12 @@
                     </div>
                   </div>
                   <!--ALBUM 2-->
-                  <div class="col-2">
-                    <div class="card d-flex card_album">
-                      <div class="d-flex card_img_album position-relative">
-                        <img class="card-img-top img_album" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
-                        <div class="play-button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                          </svg>
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
                         </div>
                       </div>
                       <div class="card-body d-flex">
@@ -459,14 +579,12 @@
                     </div>
                   </div>
                   <!--ALBUM 3-->
-                  <div class="col-2">
-                    <div class="card d-flex card_album">
-                      <div class="d-flex card_img_album position-relative">
-                        <img class="card-img-top img_album" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
-                        <div class="play-button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                          </svg>
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
                         </div>
                       </div>
                       <div class="card-body d-flex">
@@ -478,14 +596,12 @@
                     </div>
                   </div>
                   <!--ALBUM 4-->
-                  <div class="col-2">
-                    <div class="card d-flex card_album">
-                      <div class="d-flex card_img_album position-relative">
-                        <img class="card-img-top img_album" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
-                        <div class="play-button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                          </svg>
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
                         </div>
                       </div>
                       <div class="card-body d-flex">
@@ -497,14 +613,12 @@
                     </div>
                   </div>
                   <!--ALBUM 5-->
-                  <div class="col-2">
-                    <div class="card d-flex card_album">
-                      <div class="d-flex card_img_album position-relative">
-                        <img class="card-img-top img_album" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
-                        <div class="play-button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                          </svg>
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
                         </div>
                       </div>
                       <div class="card-body d-flex">
@@ -516,14 +630,46 @@
                     </div>
                   </div>
                   <!--ALBUM 6-->
-                  <div class="col-2">
-                    <div class="card d-flex card_album">
-                      <div class="d-flex card_img_album position-relative">
-                        <img class="card-img-top img_album" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
-                        <div class="play-button">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                          </svg>
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
+                        </div>
+                      </div>
+                      <div class="card-body d-flex">
+                        <div class="d-flex flex-column justify-content-center">
+                          <h5 class="card-title">X2VR</h5>
+                          <p class="card-text">Sfera Ebbasta</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--ALBUM 7-->
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
+                        </div>
+                      </div>
+                      <div class="card-body d-flex">
+                        <div class="d-flex flex-column justify-content-center">
+                          <h5 class="card-title">X2VR</h5>
+                          <p class="card-text">Sfera Ebbasta</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--ALBUM 8-->
+                  <div class="albumCard1">
+                    <div class="card d-flex card_album1">
+                      <div class="d-flex card_img_album1 position-relative">
+                        <img class="img_album1" src="./assets/imgs/X2VR.jpg" alt="sfera ebbasta" />
+                        <div id="play-stop3">
+                          <i class="bi bi-play-fill"></i>
                         </div>
                       </div>
                       <div class="card-body d-flex">
