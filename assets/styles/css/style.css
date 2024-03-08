@@ -12743,14 +12743,11 @@ a {
   color: black !important;
 }
 
-.avatar {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.avatar img, i {
+.avatar img,
+i {
   object-fit: cover;
   border-radius: 50%;
+  width: 50px;
 }
 
 .install {
