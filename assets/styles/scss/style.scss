@@ -261,7 +261,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 997;
-  z-index: 997;
   /* left: 0; */
 }
 .btn_nav_bar {
@@ -822,7 +821,7 @@ a {
   padding-block: 15px;
   position: absolute;
   top: 0;
-  z-index: 997;
+  z-index: 999;
   width: 100%;
 }
 
@@ -1113,4 +1112,10 @@ i {
 }
 .div_box_research:hover {
   transform: scale(1.1);
+}
+
+.searchIndexLvl {
+  position: sticky;
+  top: 0;
+  z-index: 998;
 }

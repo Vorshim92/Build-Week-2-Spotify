@@ -421,9 +421,11 @@ window.onload = () => {
     if (document.querySelector(".mainscroll").scrollTop > 99) {
       document.querySelector(".div-topbar").style.backgroundColor = "#1f1f1f";
       document.querySelector(".div-topbar").style.position = "sticky";
+      document.getElementById("searchResult").classList.add("searchIndexLvl");
     } else {
       document.querySelector(".div-topbar").style.backgroundColor = "transparent";
       document.querySelector(".div-topbar").style.position = "absolute";
+      document.getElementById("searchResult").classList.remove("searchIndexLvl");
     }
   }
   document.querySelector(".mainscroll").addEventListener("scroll", handleScroll);
