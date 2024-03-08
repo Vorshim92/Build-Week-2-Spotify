@@ -12219,6 +12219,7 @@ body {
 
 .mainscroll {
   background: linear-gradient(to bottom, #212121, #121212);
+  position: relative;
 }
 
 .scrolling {
