@@ -126,13 +126,13 @@ async function searchFn(e) {
 function topResultFn(search) {
   console.log(search);
   const searchResponse = search.data;
-  topResult.querySelector(".artistCard1").innerHTML = "";
+  topResult.querySelector(".artistCard_research").innerHTML = "";
   listItemsResult.innerHTML = "";
 
-  const templateHtmlCard = `<div class="card d-flex card_art1 align-items-center">
-  <div class="d-flex card_img1 position-relative">
-    <img class="img_art1" src="${searchResponse[0].artist.picture_medium}" alt="${searchResponse[0].artist.name}" />
-    <div id="play-stop2">
+  const templateHtmlCard = `<div class="card d-flex card_art_research align-items-center">
+  <div class="d-flex card_img_research position-relative">
+    <img class="img_art_research" src="${searchResponse[0].artist.picture_medium}" alt="${searchResponse[0].artist.name}" />
+    <div id="play-stop_research">
       <i class="bi bi-play-fill"></i>
     </div>
   </div>
@@ -192,6 +192,7 @@ async function generateArtistPage(id) {
     scrollingContainer.innerHTML = "";
     const tracks = artist.data;
     console.log(artist);
+    console.log(tracks);
 
     scrollingContainer.innerHTML = `<div class="artist-thumbnail p-3 text-white">
     <div class="jumbotron col-9 p-0 d-flex flex-column justify-content-end gap-3 text-white">
@@ -219,136 +220,23 @@ async function generateArtistPage(id) {
         <h4 class="py-3">Brani che ti piacciono</h4>
         <div class="d-flex gap-3 align-items-center">
           <div>
-            <img src="./assets/imgs/main/image-12.jpg" width="60px" class="rounded-5" alt="" />
+            <img src="${tracks[0].contributors[0].picture_small}" width="60px" class="rounded-5" alt="" />
           </div>
           <div>
             <h6>Hai messo mi piace a 11 brani</h6>
-            <span class="fs-7">Di Yellowcard</span>
+            <span class="fs-7">Di ${tracks[0].contributors[0].name}</span>
           </div>
         </div>
       </div>
       <!-- Albuns -->
       <div class="playlist-container">
         <div id="result-playlists">
+        <h3 class="my-4" id="greeting">Album più popolari</h3>
           <div class="playlist">
-            <h3 class="my-4" id="greeting">Album più popolari</h3>
+          <!--First ROW Main content-->
+          <div class="row container_album gy-4">
+            
           </div>
-        </div>
-        <!--First ROW Main content-->
-        <div class="row container_album gy-4">
-          <!--ALBUM 1-->
-          <div class="col-2">
-            <div class="card d-flex card_album">
-              <div class="d-flex card_img_album position-relative">
-                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
-                <div class="play-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                  </svg>
-                </div>
-              </div>
-              <div class="card-body d-flex">
-                <div class="d-flex flex-column justify-content-center">
-                  <h5 class="card-title">X2VR</h5>
-                  <p class="card-text">Sfera Ebbasta</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--ALBUM 2-->
-          <div class="col-2">
-            <div class="card d-flex card_album">
-              <div class="d-flex card_img_album position-relative">
-                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
-                <div class="play-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                  </svg>
-                </div>
-              </div>
-              <div class="card-body d-flex">
-                <div class="d-flex flex-column justify-content-center">
-                  <h5 class="card-title">X2VR</h5>
-                  <p class="card-text">Sfera Ebbasta</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--ALBUM 3-->
-          <div class="col-2">
-            <div class="card d-flex card_album">
-              <div class="d-flex card_img_album position-relative">
-                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
-                <div class="play-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                  </svg>
-                </div>
-              </div>
-              <div class="card-body d-flex">
-                <div class="d-flex flex-column justify-content-center">
-                  <h5 class="card-title">X2VR</h5>
-                  <p class="card-text">Sfera Ebbasta</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--ALBUM 4-->
-          <div class="col-2">
-            <div class="card d-flex card_album">
-              <div class="d-flex card_img_album position-relative">
-                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
-                <div class="play-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                  </svg>
-                </div>
-              </div>
-              <div class="card-body d-flex">
-                <div class="d-flex flex-column justify-content-center">
-                  <h5 class="card-title">X2VR</h5>
-                  <p class="card-text">Sfera Ebbasta</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--ALBUM 5-->
-          <div class="col-2">
-            <div class="card d-flex card_album">
-              <div class="d-flex card_img_album position-relative">
-                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
-                <div class="play-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                  </svg>
-                </div>
-              </div>
-              <div class="card-body d-flex">
-                <div class="d-flex flex-column justify-content-center">
-                  <h5 class="card-title">X2VR</h5>
-                  <p class="card-text">Sfera Ebbasta</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--ALBUM 6-->
-          <div class="col-2">
-            <div class="card d-flex card_album">
-              <div class="d-flex card_img_album position-relative">
-                <img class="card-img-top img_album" src="https://shop.universalmusic.it/cdn/shop/files/coversferastandard.png?v=1699955272&width=1000" alt="sfera ebbasta" />
-                <div class="play-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
-                  </svg>
-                </div>
-              </div>
-              <div class="card-body d-flex">
-                <div class="d-flex flex-column justify-content-center">
-                  <h5 class="card-title">X2VR</h5>
-                  <p class="card-text">Sfera Ebbasta</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -358,23 +246,48 @@ async function generateArtistPage(id) {
     document.querySelector(".artist-thumbnail").style.backgroundImage = `url('${tracks[0].contributors[0].picture_xl}')`;
     const popArtSongs = document.getElementById("popularArtistSongs");
     tracks.forEach((song, index) => {
-      if (index < 5) {
+      if (index < 10) {
         const templateHtmlSong = `<div class="col-5 d-flex gap-3">
-        <span>${index}</span>
+        <span>${index + 1}</span>
         <div class="col-10 d-flex align-items-center">
-          <img src="${song.album.cover_small}" width="30px" alt="" />
-          <span class="ms-3">${song.title}</span>
+        <img src="${song.album.cover_small}" width="30px" alt="" />
+        <span class="ms-3">${song.title}</span>
         </div>
-      </div>
-      <div class="col-6">${song.rank}</div>
-      <div class="col-1">${song.duration}</div>`;
-        const listItem = document.createElement("div");
-        listItem.classList.add("row", "d-flex", "align-items-center");
-        listItem.innerHTML = templateHtmlSong;
-        popArtSongs.appendChild(listItem);
-        listItem.addEventListener("click", () => {
+        </div>
+        <div class="col-6">${song.rank}</div>
+        <div class="col-1">${song.duration.toString().slice(0, 1)}:${song.duration.toString().slice(1)}</div>`;
+        const listSong = document.createElement("div");
+        listSong.classList.add("row", "d-flex", "align-items-center");
+        listSong.innerHTML = templateHtmlSong;
+        popArtSongs.appendChild(listSong);
+        listSong.addEventListener("click", () => {
           songInPlayer(song.preview);
           effect();
+        });
+
+        const templateHtmlSAlbum = `<div class="card d-flex card_album">
+            <div class="d-flex card_img_album position-relative">
+              <img class="card-img-top img_album" src="${song.album.cover_medium}" alt="sfera ebbasta" />
+              <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                </svg>
+              </div>
+            </div>
+            <div class="card-body d-flex">
+              <div class="d-flex flex-column justify-content-center">
+                <h5 class="card-title" style="height: 50px">${song.album.title}</h5>
+                <p class="card-text">${song.artist.name}</p>
+              </div>
+            </div>
+          </div>`;
+        const popArtAlbums = document.querySelector(".container_album");
+        const listAlbum = document.createElement("div");
+        listAlbum.classList.add("col-2");
+        listAlbum.innerHTML = templateHtmlSAlbum;
+        popArtAlbums.appendChild(listAlbum);
+        listAlbum.addEventListener("click", () => {
+          generateAlbumPage(albumID);
         });
       }
     });
