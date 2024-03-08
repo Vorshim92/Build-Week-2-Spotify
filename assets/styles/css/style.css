@@ -12209,8 +12209,9 @@ body {
       }  
   */
 .artist-thumbnail {
-  background-image: url("https://www.rollingstone.com/wp-content/uploads/2022/01/eminem-50-best-songs.jpg?w=1600&h=900&crop=1");
+  background-image: url("");
   position: relative;
+  background-size: auto;
 }
 
 .jumbotron {

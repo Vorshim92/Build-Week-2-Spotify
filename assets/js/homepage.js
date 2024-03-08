@@ -171,7 +171,7 @@ function topResultFn(search) {
 
 // GENERAZIONE ARTIST PAGE
 async function generateArtistPage(id) {
-  const url = `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`;
+  const url = `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=10`;
   const options = {
     method: "GET",
     headers: {
@@ -190,13 +190,14 @@ async function generateArtistPage(id) {
     scrollingContainer.style.paddingTop = "0";
     document.getElementById("playlist-buttons-topbar").classList.add("d-none");
     scrollingContainer.innerHTML = "";
-
+    const tracks = artist.data;
     console.log(artist);
+
     scrollingContainer.innerHTML = `<div class="artist-thumbnail p-3 text-white">
     <div class="jumbotron col-9 p-0 d-flex flex-column justify-content-end gap-3 text-white">
       <div class="display-4 fw-bold">
         <p class="fs-7 fw-normal mb-0">Artista verificato</p>
-        Eminem
+        ${tracks[0].contributors[0].name}
       </div>
       <span class="fs-7">70.000.000 di ascoltatori mensili</span>
     </div>
@@ -208,65 +209,11 @@ async function generateArtistPage(id) {
       <div class="fw-bold"><i class="bi bi-three-dots fs-4"></i></div>
     </div>
     <div class="row mt-3 px-4 d-flex justify-content-between main-container">
-      <div class="col-6 d-flex flex-column gap-3">
-        <span class="px-2 py-3 fs-4 fw-bold">Popolari</span>
-        <div class="row d-flex align-items-center">
-          <div class="col-5 d-flex gap-3">
-            <span>1</span>
-            <div class="col-10 d-flex align-items-center">
-              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
-              <span class="ms-3">Montanelli</span>
-            </div>
-          </div>
-          <div class="col-6">1.000.000</div>
-          <div class="col-1">3.00</div>
-        </div>
-        <div class="row d-flex align-items-center">
-          <div class="col-5 d-flex gap-3">
-            <span>2</span>
-            <div class="col-10 d-flex align-items-center">
-              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
-              <span class="ms-3">Montanelli</span>
-            </div>
-          </div>
-          <div class="col-6">1.000.000</div>
-          <div class="col-1">3.00</div>
-        </div>
-        <div class="row d-flex align-items-center">
-          <div class="col-5 d-flex gap-3">
-            <span>3</span>
-            <div class="col-10 d-flex align-items-center">
-              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
-              <span class="ms-3">Montanelli</span>
-            </div>
-          </div>
-          <div class="col-6">1.000.000</div>
-          <div class="col-1">3.00</div>
-        </div>
-        <div class="row d-flex align-items-center">
-          <div class="col-5 d-flex gap-3">
-            <span>4</span>
-            <div class="col-10 d-flex align-items-center">
-              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
-              <span class="ms-3">Montanelli</span>
-            </div>
-          </div>
-          <div class="col-6">1.000.000</div>
-          <div class="col-1">3.00</div>
-        </div>
-        <div class="row d-flex align-items-center">
-          <div class="col-5 d-flex gap-3">
-            <span>5</span>
-            <div class="col-10 d-flex align-items-center">
-              <img src="./assets/imgs/main/image-10.jpg" width="30px" alt="" />
-              <span class="ms-3">Montanelli</span>
-            </div>
-          </div>
-          <div class="col-6">1.000.000</div>
-          <div class="col-1">3.00</div>
-        </div>
-        <span class="fs-7 fw-bold">VISUALIZZA ALTRO</span>
-      </div>
+    <span class="px-2 py-3 fs-4 fw-bold">Popolari</span>
+      <div id="popularArtistSongs" class="col-6 d-flex flex-column gap-3">
+      
+    </div>
+    <span class="fs-7 fw-bold">VISUALIZZA ALTRO</span>
       <!-- BRANI CHE TI PIACCIONO -->
       <div class="col-5">
         <h4 class="py-3">Brani che ti piacciono</h4>
@@ -408,6 +355,29 @@ async function generateArtistPage(id) {
       <!-- SECONDA -->
     </div>
   </div>`;
+    document.querySelector(".artist-thumbnail").style.backgroundImage = `url('${tracks[0].contributors[0].picture_xl}')`;
+    const popArtSongs = document.getElementById("popularArtistSongs");
+    tracks.forEach((song, index) => {
+      if (index < 5) {
+        const templateHtmlSong = `<div class="col-5 d-flex gap-3">
+        <span>${index}</span>
+        <div class="col-10 d-flex align-items-center">
+          <img src="${song.album.cover_small}" width="30px" alt="" />
+          <span class="ms-3">${song.title}</span>
+        </div>
+      </div>
+      <div class="col-6">${song.rank}</div>
+      <div class="col-1">${song.duration}</div>`;
+        const listItem = document.createElement("div");
+        listItem.classList.add("row", "d-flex", "align-items-center");
+        listItem.innerHTML = templateHtmlSong;
+        popArtSongs.appendChild(listItem);
+        listItem.addEventListener("click", () => {
+          songInPlayer(song.preview);
+          effect();
+        });
+      }
+    });
   } catch (error) {
     console.error(error);
   }
