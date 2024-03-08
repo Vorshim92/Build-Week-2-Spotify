@@ -362,7 +362,7 @@ body {
   }
 }
 .scrolling {
-  // padding-top: 150px; // only in homepage, si disabilita in artistpage
+  padding-top: 150px; // only in homepage, si disabilita in artistpage
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   // height: 100vh;
@@ -816,7 +816,7 @@ a {
   /* stile per lo slider */
 }
 .div-topbar {
-  // background-color: #1f1f1f; // diventa transparent nell'artist page
+  background-color: #1f1f1f; // diventa transparent nell'artist page
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-block: 15px;

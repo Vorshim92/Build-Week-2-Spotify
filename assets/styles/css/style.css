@@ -12241,6 +12241,7 @@ body {
 }
 
 .scrolling {
+  padding-top: 150px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
@@ -12718,6 +12719,7 @@ a {
 }
 
 .div-topbar {
+  background-color: #1f1f1f;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-block: 15px;
