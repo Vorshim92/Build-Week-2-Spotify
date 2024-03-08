@@ -12241,7 +12241,6 @@ body {
 }
 
 .scrolling {
-  padding-top: 150px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
@@ -12719,7 +12718,6 @@ a {
 }
 
 .div-topbar {
-  background-color: #1f1f1f;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-block: 15px;
@@ -12814,6 +12812,10 @@ a {
   color: black !important;
 }
 
+.avatar {
+  cursor: pointer;
+}
+
 .avatar img,
 i {
   object-fit: cover;
@@ -12824,7 +12826,7 @@ i {
 .install {
   width: 7rem;
   height: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   cursor: pointer;
 }
@@ -12841,6 +12843,11 @@ i {
 
 .install p:hover {
   color: white;
+}
+
+.bell {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 .artistCard {
