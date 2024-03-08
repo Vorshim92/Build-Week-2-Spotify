@@ -47,8 +47,9 @@ function removeEffect() {
   pauseIcon.classList.add("d-none");
 }
 
-function songInPlayer(track) {
+function songInPlayer(track, img) {
   songPlayer.src = `${track}`;
+  document.getElementById("player-bar-img").querySelector("img").src = img;
 }
 
 function line() {
@@ -157,13 +158,13 @@ function topResultFn(search) {
       listItem.innerHTML = templateHtmlSong;
       listItemsResult.appendChild(listItem);
       listItem.addEventListener("click", () => {
-        songInPlayer(song.preview);
+        songInPlayer(song.preview, song.album.cover_small);
         effect();
       });
     }
   });
-  topResult.querySelector(".artistCard1").innerHTML = templateHtmlCard;
-  topResult.querySelector(".card_art1").addEventListener("click", () => {
+  topResult.querySelector(".artistCard_research").innerHTML = templateHtmlCard;
+  topResult.querySelector(".card_art_research").addEventListener("click", () => {
     generateArtistPage(searchResponse[0].artist.id);
   });
   return;
@@ -261,6 +262,130 @@ async function generateArtistPage(id) {
         listSong.innerHTML = templateHtmlSong;
         popArtSongs.appendChild(listSong);
         listSong.addEventListener("click", () => {
+          songInPlayer(song.preview, song.album.cover_small);
+          effect();
+        });
+
+        const templateHtmlSAlbum = `<div class="card d-flex card_album">
+            <div class="d-flex card_img_album position-relative">
+              <img class="card-img-top img_album" src="${song.album.cover_medium}" alt="sfera ebbasta" />
+              <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
+                </svg>
+              </div>
+            </div>
+            <div class="card-body d-flex">
+              <div class="d-flex flex-column justify-content-center">
+                <h5 class="card-title" style="height: 50px">${song.album.title}</h5>
+                <p class="card-text">${song.artist.name}</p>
+              </div>
+            </div>
+          </div>`;
+        const popArtAlbums = document.querySelector(".container_album");
+        const listAlbum = document.createElement("div");
+        listAlbum.classList.add("col-2");
+        listAlbum.innerHTML = templateHtmlSAlbum;
+        popArtAlbums.appendChild(listAlbum);
+        listAlbum.addEventListener("click", () => {
+          generateAlbumPage(song.album.id);
+        });
+      }
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function generateAlbumPage(id) {
+  const url = `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`;
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViMTkyMzJkN2IxMTAwMTkwZTc3MjAiLCJpYXQiOjE3MDk5MDYyMTEsImV4cCI6MTcxMTExNTgxMX0.BDY9TtC32T677MPFKwb9dbWQUpyKUKfsvQJvKWz1thA",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const album = await response.json();
+
+    searchResult.classList.add("d-none");
+    document.querySelector(".searchbar").classList.add("d-none");
+    searchBar.value = "";
+    document.querySelector(".div-topbar").style.backgroundColor = "transparent";
+    scrollingContainer.style.paddingTop = "0";
+    document.getElementById("playlist-buttons-topbar").classList.add("d-none");
+    scrollingContainer.innerHTML = "";
+
+    scrollingContainer.innerHTML = `<div class="artist-thumbnail p-3 text-white">
+    <div class="jumbotron col-9 p-0 d-flex flex-column justify-content-end gap-3 text-white">
+      <div class="display-4 fw-bold">
+        <p class="fs-7 fw-normal mb-0">Artista verificato</p>
+        ${tracks[0].contributors[0].name}
+      </div>
+      <span class="fs-7">70.000.000 di ascoltatori mensili</span>
+    </div>
+  </div>
+  <div class="text-white p-2">
+    <div class="d-flex gap-4 align-items-center px-2 pt-3">
+      <button class="btn btn-success rounded-5"><i class="bi bi-play-fill fs-5"></i></button>
+      <div><button class="btn btn-outline-light px-3 py-1 fs-7 fw-bold">FOLLOWING</button></div>
+      <div class="fw-bold"><i class="bi bi-three-dots fs-4"></i></div>
+    </div>
+    <div class="row mt-3 px-4 d-flex justify-content-between main-container">
+    <span class="px-2 py-3 fs-4 fw-bold">Popolari</span>
+      <div id="popularArtistSongs" class="col-6 d-flex flex-column gap-3">
+      
+    </div>
+    <span class="fs-7 fw-bold">VISUALIZZA ALTRO</span>
+      <!-- BRANI CHE TI PIACCIONO -->
+      <div class="col-5">
+        <h4 class="py-3">Brani che ti piacciono</h4>
+        <div class="d-flex gap-3 align-items-center">
+          <div>
+            <img src="${tracks[0].contributors[0].picture_small}" width="60px" class="rounded-5" alt="" />
+          </div>
+          <div>
+            <h6>Hai messo mi piace a 11 brani</h6>
+            <span class="fs-7">Di ${tracks[0].contributors[0].name}</span>
+          </div>
+        </div>
+      </div>
+      <!-- Albuns -->
+      <div class="playlist-container">
+        <div id="result-playlists">
+        <h3 class="my-4" id="greeting">Album più popolari</h3>
+          <div class="playlist">
+          <!--First ROW Main content-->
+          <div class="row container_album gy-4">
+            
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECONDA -->
+    </div>
+  </div>`;
+    document.querySelector(".artist-thumbnail").style.backgroundImage = `url('${tracks[0].contributors[0].picture_xl}')`;
+    const popArtSongs = document.getElementById("popularArtistSongs");
+    tracks.forEach((song, index) => {
+      if (index < 10) {
+        const templateHtmlSong = `<div class="col-5 d-flex gap-3">
+        <span>${index + 1}</span>
+        <div class="col-10 d-flex align-items-center">
+        <img src="${song.album.cover_small}" width="30px" alt="" />
+        <span class="ms-3">${song.title}</span>
+        </div>
+        </div>
+        <div class="col-6">${song.rank}</div>
+        <div class="col-1">${song.duration.toString().slice(0, 1)}:${song.duration.toString().slice(1)}</div>`;
+        const listSong = document.createElement("div");
+        listSong.classList.add("row", "d-flex", "align-items-center");
+        listSong.innerHTML = templateHtmlSong;
+        popArtSongs.appendChild(listSong);
+        listSong.addEventListener("click", () => {
           songInPlayer(song.preview);
           effect();
         });
@@ -287,7 +412,7 @@ async function generateArtistPage(id) {
         listAlbum.innerHTML = templateHtmlSAlbum;
         popArtAlbums.appendChild(listAlbum);
         listAlbum.addEventListener("click", () => {
-          generateAlbumPage(albumID);
+          generateAlbumPage(song.album.id);
         });
       }
     });
