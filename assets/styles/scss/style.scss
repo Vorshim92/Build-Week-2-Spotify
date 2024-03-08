@@ -360,7 +360,7 @@ body {
   }
 }
 .scrolling {
-  padding-top: 150px; // only in homepage, si disabilita in artistpage
+  // padding-top: 150px; // only in homepage, si disabilita in artistpage
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   // height: 100vh;
@@ -381,6 +381,7 @@ body {
   //   }
   // }
 }
+
 .close {
   color: #b3b3b3;
 }
@@ -812,7 +813,7 @@ a {
   /* stile per lo slider */
 }
 .div-topbar {
-  background-color: #1f1f1f; // diventa transparent nell'artist page
+  // background-color: #1f1f1f; // diventa transparent nell'artist page
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-block: 15px;
@@ -907,6 +908,7 @@ a {
 .avatar {
   // width: 2.5rem;
   // height: 2.5rem;
+  cursor: pointer;
 }
 .avatar img,
 i {
@@ -917,7 +919,7 @@ i {
 .install {
   width: 7rem;
   height: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   cursor: pointer;
 }
@@ -932,6 +934,11 @@ i {
 .install p:hover {
   color: white;
 }
+.bell {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
 .artistCard {
   width: 11.3rem;
 }
