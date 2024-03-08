@@ -417,6 +417,17 @@ window.onload = () => {
 
   divPlayerIcons.addEventListener("click", effect);
 
+  function handleScroll() {
+    if (document.querySelector(".mainscroll").scrollTop > 99) {
+      document.querySelector(".div-topbar").style.backgroundColor = "#1f1f1f";
+      document.querySelector(".div-topbar").style.position = "sticky";
+    } else {
+      document.querySelector(".div-topbar").style.backgroundColor = "transparent";
+      document.querySelector(".div-topbar").style.position = "absolute";
+    }
+  }
+  document.querySelector(".mainscroll").addEventListener("scroll", handleScroll);
+
   if (localStorage.getItem(rememberMe)) {
     restoreSession(userID);
   }
