@@ -75,7 +75,7 @@
                     <span class="navbar__title">Home</span>
                   </a>
                 </li>
-                <li>
+                <li id="searchBtn">
                   <a href="">
                     <span>
                       <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 bneLcE search-icon" viewBox="0 0 24 24">
@@ -267,12 +267,17 @@
               <div class="div-topbar">
                 <div id="topbar">
                   <div class="container-fluid d-flex justify-content-between pb-3">
-                    <div class="arrow d-flex gap-3">
-                      <div class="left-arrow d-flex">
-                        <img src="./assets/imgs/svgexport-20.svg" alt="left" />
+                    <div class="left-element d-flex align-items-center">
+                      <div class="arrow d-flex gap-3">
+                        <div class="left-arrow d-flex">
+                          <img src="./assets/imgs/svgexport-20.svg" alt="left" />
+                        </div>
+                        <div class="right-arrow d-flex">
+                          <img src="./assets/imgs/svgexport-21.svg" alt="right" />
+                        </div>
                       </div>
-                      <div class="right-arrow d-flex">
-                        <img src="./assets/imgs/svgexport-21.svg" alt="right" />
+                      <div class="searchbar d-none d-flex gap-3 text-white">
+                        <input id="searchBar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                       </div>
                     </div>
                     <div class="right-element d-flex gap-3 w-35 align-items-center">
@@ -297,6 +302,25 @@
                   </div>
                 </div>
               </div>
+              <!-- TOP RESULT FROM SEARCH BAR -->
+              <div id="searchResult" class="row d-none d-flex text-white bg-dark" style="padding-top: 150px">
+                <div class="col-3">
+                  <div id="topResult">
+                    <span class="px-2 py-3 fs-4 fw-bold">Top Result</span>
+
+                    <div class="artistCard1"></div>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div id="songsResult">
+                    <div class="col-6 d-flex flex-column gap-3">
+                      <span class="px-2 py-3 fs-4 fw-bold">Songs</span>
+                      <div id="listItemsResult" class="row d-flex align-items-center"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- INIZIO SCROLLING -->
               <div class="scrolling">
                 <div id="top-cards" class="container-fluid">
                   <div class="row">
